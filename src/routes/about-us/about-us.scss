@@ -66,7 +66,7 @@
 			}
 			.clients,
 			.partners {
-				@apply w-1/2 mx-auto flex items-center justify-center gap-6 lg:gap-14 flex-wrap;
+				@apply w-1/2 mx-auto lg:mx-0 lg:w-auto flex items-center justify-center gap-6 lg:gap-14 flex-wrap;
 				div {
 					@apply shrink-0;
 					&:nth-child(odd) {
