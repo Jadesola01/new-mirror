@@ -20,9 +20,11 @@ import StackedImagesAboutUs from './images/about-us-landing.svg?component';
 import DigitalOcean from './logos/digitalOcean.svg?component';
 import Shopify from './logos/shopify.svg?component';
 import THDCTechLogo from './logos/thdcTech.svg?component';
+import ChevronLeft from './icons/chevronLeft.svg?component';
 
 export {
 	ArrowRight,
+	ChevronLeft,
 	ChevronRight,
 	Close,
 	Design,

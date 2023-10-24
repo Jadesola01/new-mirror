@@ -1,7 +1,18 @@
-<script>
-	import { ArrowRight, DigitalOcean, Shopify, StackedImagesAboutUs } from 'src/lib/assets/vectors';
+<script lang="ts">
+	import {
+		ArrowRight,
+		ChevronLeft,
+		ChevronRight,
+		DigitalOcean,
+		Shopify
+	} from 'src/lib/assets/vectors';
 	import AboutUsContents from './about-us.content';
 	import './about-us.scss';
+
+	let selectedTab = 'partners';
+	// function handleTabChange(e: Event & { target: HTMLInputElement }) {
+	// 	selectedTab = e.target.value;
+	// }
 </script>
 
 <svelte:head>
@@ -77,25 +88,79 @@
 			<h2>Our Process</h2>
 		</div>
 		<div class="sum-wrapper">
-			<div class="happy-clients">
+			<div class="max-lg:hidden flex items-center justify-center mb-6">
+				<label
+					class={`relative p-[10px] pl-[102px] font-medium text-3xl leading-tight border-b-[3px] ${
+						selectedTab === 'clients' ? 'border-purple-1' : 'border-gray-8'
+					}`}
+					for="clients"
+				>
+					<input
+						class="absolute inset-0 -z-10 opacity-0"
+						type="radio"
+						name="tab"
+						id="clients"
+						value="clients"
+						bind:group={selectedTab}
+					/>
+					<span class={`${selectedTab === 'clients' ? 'text-gray-3' : 'text-purple-1'}`}
+						>Our Happy Clients</span
+					>
+				</label>
+				<label
+					class={`relative p-[10px] pr-[102px] font-medium text-3xl leading-tight border-b-[3px] ${
+						selectedTab === 'partners' ? 'border-purple-1' : 'border-gray-8'
+					}`}
+					for="partners"
+				>
+					<input
+						class="absolute inset-0 -z-10 opacity-0"
+						type="radio"
+						name="tab"
+						id="partners"
+						value="partners"
+						bind:group={selectedTab}
+					/>
+					<span class={`${selectedTab === 'partners' ? 'text-gray-3' : 'text-purple-1'}`}
+						>Our Trusted Partners</span
+					>
+				</label>
+			</div>
+			<div class={`happy-clients ${selectedTab === 'partners' ? 'lg:hidden' : ''}`}>
 				<h3>Our Happy Clients</h3>
 				<p>Just some of the leading brands that trust THDC Technologies</p>
-				<div class="clients">
-					{#each [DigitalOcean, Shopify, Shopify, DigitalOcean] as client}
-						<div>
-							<svelte:component this={client} />
-						</div>
-					{/each}
+				<div class="flex items-center gap-12 lg:mt-14">
+					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
+						<ChevronLeft />
+					</button>
+					<div class="clients">
+						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as client}
+							<div>
+								<svelte:component this={client} />
+							</div>
+						{/each}
+					</div>
+					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
+						<ChevronRight />
+					</button>
 				</div>
 			</div>
-			<div class="trusted-partners">
+			<div class={`trusted-partners ${selectedTab === 'clients' ? 'lg:hidden' : ''}`}>
 				<h3>Our Trusted Partners</h3>
-				<div class="partners">
-					{#each [DigitalOcean, Shopify, Shopify, DigitalOcean] as partner}
-						<div>
-							<svelte:component this={partner} />
-						</div>
-					{/each}
+				<div class="flex items-center gap-12 lg:mt-14">
+					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
+						<ChevronLeft />
+					</button>
+					<div class="partners">
+						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as partner}
+							<div>
+								<svelte:component this={partner} />
+							</div>
+						{/each}
+					</div>
+					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
+						<ChevronRight />
+					</button>
 				</div>
 			</div>
 		</div>
