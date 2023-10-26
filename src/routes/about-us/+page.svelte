@@ -1,18 +1,10 @@
 <script lang="ts">
-	import {
-		ArrowRight,
-		ChevronLeft,
-		ChevronRight,
-		DigitalOcean,
-		Shopify
-	} from 'src/lib/assets/vectors';
+	import { DigitalOcean, Shopify } from 'src/lib/assets/vectors';
+	import { IconChevronRight, IconChevronLeft, IconCircleArrowRight } from '@tabler/icons-svelte';
 	import AboutUsContents from './about-us.content';
 	import './about-us.scss';
 
 	let selectedTab = 'partners';
-	// function handleTabChange(e: Event & { target: HTMLInputElement }) {
-	// 	selectedTab = e.target.value;
-	// }
 </script>
 
 <svelte:head>
@@ -131,7 +123,7 @@
 				<p>Just some of the leading brands that trust THDC Technologies</p>
 				<div class="flex items-center gap-12 lg:mt-14">
 					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
-						<ChevronLeft />
+						<IconChevronLeft />
 					</button>
 					<div class="clients">
 						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as client}
@@ -141,7 +133,7 @@
 						{/each}
 					</div>
 					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
-						<ChevronRight />
+						<IconChevronRight />
 					</button>
 				</div>
 			</div>
@@ -149,7 +141,7 @@
 				<h3>Our Trusted Partners</h3>
 				<div class="flex items-center gap-12 lg:mt-14">
 					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
-						<ChevronLeft />
+						<IconChevronLeft />
 					</button>
 					<div class="partners">
 						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as partner}
@@ -159,7 +151,7 @@
 						{/each}
 					</div>
 					<button type="button" class="max-lg:hidden w-[53px] p-2 text-[#292D32]">
-						<ChevronRight />
+						<IconChevronRight />
 					</button>
 				</div>
 			</div>
@@ -174,7 +166,7 @@
 		</div>
 		<a href="/get-a-quote">
 			<span>Get A Quote</span>
-			<ArrowRight />
+			<IconCircleArrowRight />
 		</a>
 	</div>
 </section>

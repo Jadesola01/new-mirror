@@ -12,10 +12,10 @@ module.exports = {
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
-		extraFileExtensions: ['.svelte'],
+		extraFileExtensions: ['.svelte']
 	},
 	rules: {
-		indent: ["error", 2]
+		indent: ['error', 2]
 	},
 	env: {
 		browser: true,
@@ -30,5 +30,5 @@ module.exports = {
 				parser: '@typescript-eslint/parser'
 			}
 		}
-	],
+	]
 };

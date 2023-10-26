@@ -1,5 +1,5 @@
 <script>
-	import { ArrowRight } from '$lib/assets/vectors';
+	import { IconCircleArrowRight } from '@tabler/icons-svelte';
 </script>
 
 <svelte:head>
@@ -68,7 +68,7 @@
 			>
 				<span>Submit Message</span>
 				<div class="w-4">
-					<ArrowRight />
+					<IconCircleArrowRight />
 				</div>
 			</button>
 		</form>

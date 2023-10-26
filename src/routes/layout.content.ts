@@ -1,4 +1,9 @@
-import { Instagram, LinkedIn, X, YouTube } from '$lib/assets/vectors';
+import {
+	IconBrandInstagram,
+	IconBrandLinkedin,
+	IconBrandTwitter,
+	IconBrandYoutube
+} from '@tabler/icons-svelte';
 
 export default {
 	routes: [
@@ -17,22 +22,22 @@ export default {
 			{
 				href: 'https://twitter.com/thdctech',
 				label: 'Check out our Twitter',
-				icon: X
+				icon: IconBrandTwitter
 			},
 			{
 				href: 'https://instagram.com/thdctech',
 				label: 'Check out our Instagram',
-				icon: Instagram
+				icon: IconBrandInstagram
 			},
 			{
 				href: 'https://linkedin.com/thdctech',
 				label: 'Check out our LinkedIn',
-				icon: LinkedIn
+				icon: IconBrandLinkedin
 			},
 			{
 				href: 'https://youTube.com/thdctech',
 				label: 'Check out our YouTube',
-				icon: YouTube
+				icon: IconBrandYoutube
 			}
 		]
 	}

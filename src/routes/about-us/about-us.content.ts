@@ -1,10 +1,10 @@
-import { Design, SEO_Expertise, Web_Development } from 'src/lib/assets/vectors';
+import { IconBrandAsana, IconBuilding, IconPalette, IconSettings } from '@tabler/icons-svelte';
 
 export default {
 	doings: [
-		{ icon: Web_Development, title: 'Web Development' },
-		{ icon: Design, title: 'Design' },
-		{ icon: SEO_Expertise, title: 'SEO Expertise' },
-		{ icon: Design, title: 'Project Management' }
+		{ icon: IconBuilding, title: 'Web Development' },
+		{ icon: IconPalette, title: 'Design' },
+		{ icon: IconSettings, title: 'SEO Expertise' },
+		{ icon: IconBrandAsana, title: 'Project Management' }
 	]
 };

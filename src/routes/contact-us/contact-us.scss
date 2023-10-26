@@ -1,27 +1,29 @@
-.details-form {
-	@apply mx-[25px] mb-4;
-	& > input {
-		@apply inline-block w-full text-xs leading-none font-light bg-white-1 rounded-lg py-[16.5px] px-4 mb-6 text-gray-6 placeholder:text-inherit;
+.form {
+	@apply px-[38px] lg:px-[39px] pt-6 lg:pt-12 pb-4 lg:pb-8;
+	div:first-child {
+		@apply grid lg:grid-cols-2 gap-6;
+		input {
+			@apply inline-block w-full text-xs lg:text-xl lg:leading-snug leading-snug font-light bg-white-1 rounded-lg py-[16.5px] px-4 text-gray-6 placeholder:text-inherit lg:px-6 lg:py-[18px];
+		}
 	}
-	& > div {
-		@apply mb-4;
+	& > div:last-of-type {
 		p {
-			@apply font-medium text-gray-2 leading-tight;
+			@apply lg:text-2xl lg:leading-tight font-medium text-gray-2 leading-tight mt-6 lg:mt-12 mb-4 lg:mb-6;
 		}
 		textarea {
-			@apply p-4 text-xs font-light rounded-lg bg-white-1 text-gray-6 block w-full resize-none placeholder:text-inherit leading-none min-h-[81px] mt-4 mb-3;
+			@apply p-4 lg:p-6 text-xs lg:text-xl lg:leading-snug font-light rounded-lg bg-white-1 text-gray-6 block w-full resize-none placeholder:text-inherit leading-snug min-h-[81px];
 		}
 		label {
-			@apply relative w-full rounded-lg bg-white-1 font-light text-xs overflow-hidden flex items-center py-[10px] px-6 gap-12;
+			@apply relative w-full rounded-lg bg-white-1 font-light text-xs lg:text-xl lg:leading-snug overflow-hidden flex items-center py-[10px] lg:py-[14px] lg:px-9 mt-3 mb-4 lg:my-6 px-6 gap-12;
 			input {
 				@apply absolute inset-0 -z-[1] opacity-0;
 			}
 			div {
-				@apply w-8 bg-white rounded-lg p-[5.5px] shrink-0;
+				@apply w-8 lg:w-[62px] bg-white rounded-lg p-[5.5px] lg:p-[11px] shrink-0;
 			}
 		}
 	}
 	button {
-		@apply text-white bg-purple-1 block w-full rounded-lg text-sm leading-tight py-[27px] font-medium;
+		@apply text-white bg-purple-1 block w-full rounded-lg text-sm py-[27px] font-medium lg:text-xl;
 	}
 }

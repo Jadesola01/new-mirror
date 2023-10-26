@@ -37,7 +37,8 @@ export default {
 			fontFamily: {
 				satoshi: 'Satoshi',
 				charm: 'Charm',
-				aeonik: 'Aeonik'
+				aeonik: 'Aeonik',
+				'cera-pro': 'Cera Pro'
 			}
 		}
 	},

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Close, Menu, THDCTechLogo } from '$lib/assets/vectors';
+	import { THDCTechLogo } from '$lib/assets/vectors';
 	import { Backdrop, NavLink } from 'src/lib/components';
 	import LayoutContents from 'src/routes/layout.content';
 	import 'src/routes/layout.scss';
+	import { IconMenu2, IconX } from '@tabler/icons-svelte';
 	import '../app.scss';
 
 	const { routes, footerSection } = LayoutContents;
@@ -36,7 +37,7 @@
 			aria-controls="navmenu"
 			aria-expanded={menuVisible}
 		>
-			<svelte:component this={menuVisible ? Close : Menu} />
+			<svelte:component this={menuVisible ? IconX : IconMenu2} />
 		</button>
 		<nav class={`${menuVisible ? 'flex' : 'hidden'}`} id="navmenu">
 			{#each routes as { href, label }}
