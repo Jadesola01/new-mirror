@@ -1,5 +1,5 @@
 import { DigitalOcean, Shopify } from '$lib/assets/vectors';
-import { IconMail } from '@tabler/icons-svelte';
+import { IconMail, IconStar, IconStarFilled } from '@tabler/icons-svelte';
 
 export default {
 	landing: {
@@ -7,17 +7,7 @@ export default {
 		subHeading:
 			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
 		buttonText: 'Get A Quote',
-		partnersList: Array(6)
-			.fill(null)
-			.map((_, i) =>
-				i % 2
-					? {
-							icon: DigitalOcean,
-							href: 'https://digitalocean.com',
-							label: 'Go to DigitalOcean.com'
-					  }
-					: { icon: Shopify, href: 'https://shopify.com', label: 'Go to Shopify.com' }
-			)
+		partnersList: [Shopify, DigitalOcean, Shopify, DigitalOcean, Shopify, DigitalOcean]
 	},
 	aboutUs: {
 		heading: "It's more than an agency",
@@ -50,16 +40,56 @@ export default {
 		heading: 'Our Happy Clients',
 		subHeading:
 			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
-		testimonials: Array(4).fill({
-			comment:
-				'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
-			avatarSrc:
-				'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
-			author: 'Johnson B. Steven',
-			title: 'CEO',
-			company: 'Stripe',
-			rating: 4
-		})
+		testimonials: [
+			{
+				comment:
+					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
+				avatar: {
+					src: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					alt: ''
+				},
+				name: 'Johnson B. Steven',
+				title: 'CEO',
+				company: 'Stripe',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+			},
+			{
+				comment:
+					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
+				avatar: {
+					src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					alt: ''
+				},
+				name: 'Johnson B. Steven',
+				title: 'CEO',
+				company: 'Stripe',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+			},
+			{
+				comment:
+					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
+				avatar: {
+					src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					alt: ''
+				},
+				name: 'Johnson B. Steven',
+				title: 'CEO',
+				company: 'Stripe',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+			},
+			{
+				comment:
+					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
+				avatar: {
+					src: 'https://images.unsplash.com/photo-1506863530036-1efeddceb993?auto=format&fit=crop&q=80&w=1944&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					alt: ''
+				},
+				name: 'Johnson B. Steven',
+				title: 'CEO',
+				company: 'Stripe',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+			}
+		]
 	},
 	subscribe: {
 		heading: 'Be among those that hear from us first.',

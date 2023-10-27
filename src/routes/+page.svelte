@@ -28,16 +28,14 @@
 				<div>
 					<img
 						src="https://images.unsplash.com/photo-1559523182-a284c3fb7cff?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						alt="three man in a workspace"
+						alt="three men in a workspace"
 					/>
 				</div>
 			</div>
 		</div>
 		<div class="partners-list">
-			{#each landing.partnersList as partner, i}
-				<a href={partner.href} aria-label={partner.label}>
-					<svelte:component this={partner.icon} />
-				</a>
+			{#each landing.partnersList as partner}
+				<svelte:component this={partner} />
 			{/each}
 		</div>
 	</div>
@@ -102,10 +100,10 @@
 			</div>
 			<div class="cta-main-contents">
 				<p>Have more questions to ask about us?</p>
-				<button type="button">
+				<a href="/get-a-quote">
 					<span>Get A Quote</span>
 					<IconCircleArrowRight />
-				</button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -129,14 +127,16 @@
 					</p>
 					<div class="author-details">
 						<div class="avatar-wrapper">
-							<img src={testimonial.avatarSrc} alt={`A portrait of ${testimonial.author}`} />
+							<img src={testimonial.avatar.src} alt={testimonial.avatar.alt} />
 						</div>
 						<div class="author-info">
-							<h3>{testimonial.author}</h3>
+							<h3>{testimonial.name}</h3>
 							<p>{testimonial.title}, {testimonial.company}</p>
-							<ul>
-								<!-- TODO: star SVG out of 5 depending on the `rating` value e.gc., if `rating` is 3, 3 FilledStar SVG and 2 Star SVG are rendered -->
-							</ul>
+							<div>
+								{#each testimonial.rating as rating}
+									<svelte:component this={rating} />
+								{/each}
+							</div>
 						</div>
 					</div>
 				</li>

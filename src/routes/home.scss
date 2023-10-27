@@ -39,8 +39,8 @@
 		}
 		.partners-list {
 			@apply flex items-center gap-6 mt-10 mb-12 overflow-hidden -ml-6 lg:ml-0 lg:justify-center lg:gap-[62px] lg:mt-[83.44px] lg:mb-[91.56px];
-			a {
-				@apply flex-shrink-0;
+			svg {
+				@apply shrink-0;
 				&:nth-child(even) {
 					@apply w-[120px] md:w-[180px];
 				}
@@ -149,12 +149,12 @@
 				p {
 					@apply mb-4 text-[15px] font-light leading-5 lg:leading-tight md:text-[22px] md:mb-6;
 				}
-				button {
-					@apply border-0 rounded-md text-white-2 bg-purple-1 font-satoshi text-sm font-medium inline-flex items-center justify-center gap-2 md:gap-4 py-[14px] md:py-5 px-[27px] md:px-[90px] outline-none md:text-[23px] md:leading-[1.35];
+				a {
+					@apply rounded-md text-white-2 bg-purple-1 font-satoshi text-sm font-medium inline-flex items-center justify-center gap-2 md:gap-4 py-[14px] md:py-5 px-[27px] md:px-[90px] md:text-[23px] md:leading-[1.35];
 					svg {
 						width: unset;
 						height: unset;
-						@apply w-4 md:w-[22px];
+						@apply w-4 aspect-square md:w-[22px];
 					}
 				}
 			}
@@ -194,8 +194,13 @@
 						p {
 							@apply my-[2px] md:my-1;
 						}
-						ul {
-							@apply h-[1em] bg-yellow-300;
+						div {
+							@apply text-yellow-300 flex items-center gap-px lg:gap-[3px];
+							svg {
+								width: unset;
+								height: unset;
+								@apply w-2 lg:w-[18px];
+							}
 						}
 					}
 				}
