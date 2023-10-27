@@ -1,29 +1,123 @@
-.form {
-	@apply px-[38px] lg:px-[39px] pt-6 lg:pt-12 pb-4 lg:pb-8;
-	div:first-child {
-		@apply grid lg:grid-cols-2 gap-6;
-		input {
-			@apply inline-block w-full text-xs lg:text-xl lg:leading-snug leading-snug font-light bg-white-1 rounded-lg py-[16.5px] px-4 text-gray-6 placeholder:text-inherit lg:px-6 lg:py-[18px];
-		}
-	}
-	& > div:last-of-type {
-		p {
-			@apply lg:text-2xl lg:leading-tight font-medium text-gray-2 leading-tight mt-6 lg:mt-12 mb-4 lg:mb-6;
-		}
-		textarea {
-			@apply p-4 lg:p-6 text-xs lg:text-xl lg:leading-snug font-light rounded-lg bg-white-1 text-gray-6 block w-full resize-none placeholder:text-inherit leading-snug min-h-[81px];
-		}
-		label {
-			@apply relative w-full rounded-lg bg-white-1 font-light text-xs lg:text-xl lg:leading-snug overflow-hidden flex items-center py-[10px] lg:py-[14px] lg:px-9 mt-3 mb-4 lg:my-6 px-6 gap-12;
-			input {
-				@apply absolute inset-0 -z-[1] opacity-0;
+.contact-us-landing {
+	&-restrictor {
+		@apply pt-8 lg:pt-[120px] pb-10 lg:pb-[72px] lg:pl-10;
+		.text-content {
+			@apply text-gray-6 text-center lg:text-left mb-3 lg:mb-[23px] w-[64%] lg:w-[38.98438%] lg:mx-0 mx-auto;
+			h1 {
+				@apply text-2xl font-medium text-gray-2 leading-tight lg:text-[40px] mb-2 lg:mb-[9px];
 			}
-			div {
-				@apply w-8 lg:w-[62px] bg-white rounded-lg p-[5.5px] lg:p-[11px] shrink-0;
+			p {
+				@apply font-light text-sm leading-snug lg:text-xl lg:leading-snug;
 			}
 		}
+		.socials {
+			@apply flex items-center justify-center gap-4 text-gray-6 lg:justify-start;
+			a {
+				@apply w-[18px] lg:w-6;
+				svg {
+					width: unset;
+					height: unset;
+					@apply w-full;
+				}
+			}
+		}
 	}
-	button {
-		@apply text-white bg-purple-1 block w-full rounded-lg text-sm py-[27px] font-medium lg:text-xl;
+}
+.form-section {
+	@apply bg-white-1 text-gray-6;
+	&-restrictor {
+		@apply lg:pb-[112px] lg:flex justify-between;
+		& > div:first-of-type {
+			@apply pt-8 pb-6 lg:py-0 lg:ml-[39px] lg:mt-[88px] lg:mb-[120px] shrink-0 lg:w-[27.7343758%];
+			.text-content {
+				@apply text-center lg:text-left lg:mr-12 mb-6 lg:mb-14;
+				h2 {
+					@apply text-2xl leading-tight text-gray-2 font-medium lg:text-[44px] lg:leading-tight mb-1 lg:mb-[9px];
+				}
+				p {
+					@apply text-sm lg:text-xl lg:leading-[1.35] leading-[1.3] font-light;
+				}
+			}
+			.text-content + div {
+				@apply mx-[31px] lg:mx-0 flex gap-[9px] lg:gap-[21px] items-start justify-start;
+				& > div:first-of-type {
+					div {
+						@apply w-[18px] lg:w-[30px];
+						i {
+							@apply block w-px h-[72.5px] lg:h-[118.5px] mx-auto bg-[#B8B0F2];
+						}
+						&:last-of-type {
+							i {
+								@apply hidden;
+							}
+						}
+					}
+				}
+				.steps-list {
+					@apply flex flex-col items-stretch gap-6;
+					div {
+						h3 {
+							@apply text-gray-2 lg:text-xl lg:leading-tight mb-[6px] text-base font-medium leading-tight;
+						}
+						p {
+							@apply text-[10px] lg:text-base font-light leading-[1.3];
+						}
+					}
+				}
+			}
+		}
+		.form-wrapper {
+			@apply relative pt-8 lg:pt-0 pb-6 lg:mb-[42.5px] bg-white shrink-0 lg:w-[54.6875%];
+			& > div {
+				@apply lg:absolute lg:-translate-y-full flex gap-3 items-center lg:px-8 py-6 lg:py-[18px] px-4 bg-white-1 rounded-lg mx-3 lg:mx-0 lg:gap-6;
+				div {
+					@apply w-8 lg:w-[84px] lg:p-5 bg-purple-1 p-[7.62px] rounded-lg shrink-0;
+				}
+				p {
+					@apply text-xs lg:text-xl lg:leading-[1.35] font-light leading-tight;
+					span {
+						@apply font-medium;
+					}
+				}
+			}
+			.contact-form {
+				@apply px-[38px] lg:px-[39px] pt-6 lg:pt-12 pb-4 lg:pb-8;
+				div:first-child {
+					@apply grid lg:grid-cols-2 gap-6;
+					input {
+						@apply inline-block w-full text-xs lg:text-xl lg:leading-snug leading-snug font-light bg-white-1 rounded-lg py-[16.5px] px-4 text-gray-6 placeholder:text-inherit lg:px-6 lg:py-[18px];
+					}
+				}
+				& > div:last-of-type {
+					p {
+						@apply lg:text-2xl lg:leading-tight font-medium text-gray-2 leading-tight mt-6 lg:mt-12 mb-4 lg:mb-6;
+					}
+					textarea {
+						@apply p-4 lg:p-6 text-xs lg:text-xl lg:leading-snug font-light rounded-lg bg-white-1 text-gray-6 block w-full resize-none placeholder:text-inherit leading-snug min-h-[81px];
+					}
+					label {
+						@apply relative w-full rounded-lg bg-white-1 font-light text-xs lg:text-xl lg:leading-snug overflow-hidden flex items-center py-[10px] lg:py-[14px] lg:px-9 mt-3 mb-4 lg:my-6 px-6 gap-12;
+						input {
+							@apply absolute inset-0 -z-[1] opacity-0;
+						}
+						div {
+							@apply w-8 lg:w-[62px] bg-white rounded-lg p-[5.5px] lg:p-[11px] shrink-0;
+						}
+					}
+				}
+				button {
+					@apply text-white bg-purple-1 block w-full rounded-lg text-sm py-[27px] font-medium lg:text-xl;
+				}
+			}
+			& > p {
+				@apply text-xs lg:text-base font-light text-center w-3/4 mx-auto mb-10 lg:mb-0;
+				a {
+					@apply font-medium;
+				}
+			}
+		}
 	}
+}
+.placeholder-section {
+	@apply hidden lg:block pb-[21.11111%] bg-gray-2;
 }

@@ -24,10 +24,10 @@
 		<div class="stacked-images-wrapper">
 			<div>
 				<div class="top-image">
-					<img src={landing.images.top.src} alt={landing.images.top.alt} />
+					<img src={landing.images.top.src} alt={landing.images.top.alt} loading="lazy" />
 				</div>
 				<div class="bottom-image">
-					<img src={landing.images.bottom.src} alt={landing.images.bottom.alt} />
+					<img src={landing.images.bottom.src} alt={landing.images.bottom.alt} loading="lazy" />
 				</div>
 			</div>
 		</div>

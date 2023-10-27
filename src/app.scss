@@ -3,17 +3,18 @@
 @tailwind utilities;
 
 :root {
-  font-family: Cera Pro;
+	font-family: Cera Pro;
+	scroll-behavior: smooth;
 }
 
 .restrict {
-  height: 100vh;
-  overflow: hidden;
+	height: 100vh;
+	overflow: hidden;
 }
 
 @media (min-width: 1024px) {
-  .restrict {
-    height: unset;
-    overflow: unset;
-  }
+	.restrict {
+		height: unset;
+		overflow: unset;
+	}
 }

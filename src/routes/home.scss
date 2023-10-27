@@ -128,7 +128,7 @@
 						@apply my-4 text-[10px] font-light md:text-base;
 					}
 					button {
-						@apply font-bold text-[13px] rounded-md border-0 text-white bg-purple-1 py-3 px-8 outline-none md:text-base md:py-5 md:tracking-[-0.0175em] md:px-[34px];
+						@apply font-bold text-[13px] rounded-md border-0 text-white bg-purple-1 py-3 px-8   md:text-base md:py-5 md:tracking-[-0.0175em] md:px-[34px];
 					}
 				}
 			}
@@ -227,7 +227,7 @@
 						@apply hidden md:inline-block w-6;
 					}
 					input {
-						@apply outline-none placeholder:text-inherit;
+						@apply placeholder:text-inherit;
 					}
 				}
 				button {

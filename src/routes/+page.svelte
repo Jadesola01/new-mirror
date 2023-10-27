@@ -26,10 +26,7 @@
 			</div>
 			<div class="hero-illustration-wrapper">
 				<div>
-					<img
-						src="https://images.unsplash.com/photo-1559523182-a284c3fb7cff?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-						alt="three men in a workspace"
-					/>
+					<img src={landing.image.src} alt={landing.image.alt} loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -76,7 +73,7 @@
 				<li>
 					<div class="image-wrapper">
 						<div>
-							<img src={work.imgSrc} alt={work.imgAlt} />
+							<img src={work.image.src} alt={work.image.alt} loading="lazy" />
 						</div>
 					</div>
 					<div class={`work-description-wrapper${work.flip ? ' flipped' : ''}`}>

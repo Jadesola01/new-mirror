@@ -1,0 +1,21 @@
+.quote-form {
+	@apply text-[10px] leading-[1.3] text-gray-6 text-center pt-8 shrink-0 mx-[32.5px] flex flex-col items-stretch gap-4 lg:gap-6;
+	div {
+		@apply grid gap-6 lg:grid-cols-2;
+	}
+	input,
+	textarea {
+		@apply rounded-lg p-4 bg-white-1 font-light placeholder:text-inherit;
+	}
+	textarea {
+		@apply resize-y min-h-[84px] max-h-80;
+	}
+	button {
+		@apply self-center flex items-center justify-center gap-2 font-medium bg-purple-1 text-white rounded-lg text-xs leading-tight px-[18.5px] py-4;
+		svg {
+			width: unset;
+			height: unset;
+			@apply w-4;
+		}
+	}
+}

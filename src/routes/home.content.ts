@@ -6,6 +6,10 @@ export default {
 		heading: 'Design that tells your story.',
 		subHeading:
 			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
+		image: {
+			src: 'https://images.unsplash.com/photo-1559523182-a284c3fb7cff?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%',
+			alt: ''
+		},
 		buttonText: 'Get A Quote',
 		partnersList: [Shopify, DigitalOcean, Shopify, DigitalOcean, Shopify, DigitalOcean]
 	},
@@ -26,9 +30,10 @@ export default {
 			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
 		works: Array(3)
 			.fill({
-				imgSrc:
-					'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-				imgAlt: 'A woman and a man sitting in front of a monitor',
+				image: {
+					src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+					alt: ''
+				},
 				title: 'Share love',
 				description:
 					'We are a creative and innovative design agency that is passionate about helping our clients achieve their goals. We are also committed to providing excellent customer service. You get access to a team of experienced and talented experts that are really good at what they do.',
