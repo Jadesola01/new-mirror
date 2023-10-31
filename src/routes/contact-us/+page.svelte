@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section class="contact-us-landing">
-	<div class="content-restrictor contact-us-landing-restrictor">
+	<div class="responsive-wrapper contact-us-landing-restrictor">
 		<div class="text-content">
 			<h1>{landing.heading}</h1>
 			<p>{landing.subHeading}</p>
@@ -26,7 +26,7 @@
 	</div>
 </section>
 <section class="form-section">
-	<div class="content-restrictor form-section-restrictor">
+	<div class="responsive-wrapper form-section-restrictor">
 		<div>
 			<div class="text-content">
 				<h2>{stepSection.textContent.heading}</h2>

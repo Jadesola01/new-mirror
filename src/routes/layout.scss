@@ -1,5 +1,5 @@
-.content-restrictor {
-	@apply w-full max-w-7xl mx-auto min-w-[375px];
+.responsive-wrapper {
+	@apply w-full max-w-7xl mx-auto;
 }
 .header {
 	@apply bg-white-1 relative z-50;

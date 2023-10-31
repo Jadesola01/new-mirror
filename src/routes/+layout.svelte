@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { THDCTechLogo } from '$lib/assets/vectors';
+	import { IconMenu2, IconX } from '@tabler/icons-svelte';
 	import { Backdrop, NavLink } from 'src/lib/components';
 	import LayoutContents from 'src/routes/layout.content';
 	import 'src/routes/layout.scss';
-	import { IconMenu2, IconX } from '@tabler/icons-svelte';
 	import '../app.scss';
 
 	const { routes, footerSection } = LayoutContents;
@@ -60,7 +60,7 @@
 </main>
 
 <footer class="footer">
-	<div class="content-restrictor footer-restrictor">
+	<div class="responsive-wrapper footer-restrictor">
 		<a href="/" title="Go to home page">
 			<THDCTechLogo />
 		</a>

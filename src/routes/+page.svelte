@@ -12,7 +12,7 @@
 </svelte:head>
 
 <section class="landing">
-	<div class="content-restrictor landing-restrictor">
+	<div class="responsive-wrapper landing-restrictor">
 		<div class="landing-top-section">
 			<div class="landing-contents">
 				<div>
@@ -39,7 +39,7 @@
 </section>
 
 <section class="about-us">
-	<div class="content-restrictor about-us-restrictor">
+	<div class="responsive-wrapper about-us-restrictor">
 		<div>
 			<h2 class="section-heading">
 				{aboutUs.heading}
@@ -63,7 +63,7 @@
 </section>
 
 <section class="our-works">
-	<div class="content-restrictor our-works-restrictor">
+	<div class="responsive-wrapper our-works-restrictor">
 		<div>
 			<h2 class="section-heading">{projects.heading}</h2>
 			<p class="section-subheading">{projects.subHeading}</p>
@@ -90,7 +90,7 @@
 </section>
 
 <section class="cta">
-	<div class="content-restrictor cta-restrictor">
+	<div class="responsive-wrapper cta-restrictor">
 		<div class="content-wrapper">
 			<div class="illustration">
 				<ThinkingWoman />
@@ -143,7 +143,7 @@
 </section>
 
 <section class="newsletter-subscription">
-	<div class="content-restrictor newsletter-subscription-restrictor">
+	<div class="responsive-wrapper newsletter-subscription-restrictor">
 		<div>
 			<h2 class="section-heading">
 				{subscribe.heading}

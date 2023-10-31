@@ -12,110 +12,113 @@
 	<title>THDC Tech - About Us</title>
 </svelte:head>
 
-<section class="about-us-landing">
-	<div class="content-restrictor about-us-landing-restrictor">
-		<div class="text-content">
+<section id="about-us__landing">
+	<div class="responsive-wrapper about-us__landing-content">
+		<header class="about-us__landing-content__header">
 			<h1>{landing.heading}</h1>
-			<div>
+			<div class="landing__header__subheadings">
 				<p>{landing.subHeading[0]}</p>
 				<p>{landing.subHeading[1]}</p>
 			</div>
-		</div>
-		<div class="stacked-images-wrapper">
-			<div>
-				<div class="top-image">
+		</header>
+		<div class="about-us__landing-images">
+			<div class="about-us__landing-images__container">
+				<div class="landing__image top-image">
 					<img src={landing.images.top.src} alt={landing.images.top.alt} loading="lazy" />
 				</div>
-				<div class="bottom-image">
+				<div class="landing__image bottom-image">
 					<img src={landing.images.bottom.src} alt={landing.images.bottom.alt} loading="lazy" />
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="wwd-section">
-	<div class="content-restrictor wwd-section-restrictor">
-		<div class="text-content">
+<section id="services">
+	<div class="responsive-wrapper services__content">
+		<header class="services__content-header">
 			<h2>What we do?</h2>
-		</div>
-		<div class="about-us-doings">
+		</header>
+		<div class="services__doings">
 			{#each whatWeDo.doings as doing}
-				<div class="doing-wrapper">
-					<div>
+				<div class="service">
+					<div class="service__icon">
 						<svelte:component this={doing.icon} />
 					</div>
-					<p>{doing.title}</p>
+					<p class="service__title">{doing.title}</p>
 				</div>
 			{/each}
 		</div>
-		<a href="/see-all-services">
+		<a href="/see-all-services" class="services__link">
 			<span>See all services</span>
 		</a>
 	</div>
 </section>
-
-<section class="our-process-section">
-	<div class="content-restrictor our-process-section-restrictor">
-		<div class="text-content">
+<section id="our-process">
+	<div class="responsive-wrapper our-process__content">
+		<header class="our-process__content-header">
 			<h2>Our Process</h2>
-		</div>
-		<div class="sum-wrapper">
-			<div>
-				<label for="clients">
+		</header>
+		<div class="our-process__content__tabs">
+			<div class="our-process__content__tabs-tab">
+				<label for="clients" class="tab-label">
 					<input type="radio" name="tab" id="clients" value="clients" bind:group={selectedTab} />
-					<span>Our Happy Clients</span>
-					<i />
+					<span class="tab-text">Our Happy Clients</span>
+					<i class="tab-indicator" />
 				</label>
-				<label for="partners">
+				<label for="partners" class="tab-label">
 					<input type="radio" name="tab" id="partners" value="partners" bind:group={selectedTab} />
-					<span>Our Trusted Partners</span>
-					<i />
+					<span class="tab-text">Our Trusted Partners</span>
+					<i class="tab-indicator" />
 				</label>
 			</div>
-			<div class={`happy-clients ${selectedTab === 'clients' ? 'in-view' : 'lg:hidden'}`}>
-				<h3>Our Happy Clients</h3>
-				<p>Just some of the leading brands that trust THDC Technologies</p>
-				<div>
-					<button type="button" title="Show previous clients">
-						<IconChevronLeft />
-					</button>
-					<div class="clients">
-						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as client}
-							<svelte:component this={client} />
-						{/each}
+			<div class="our-process__content__tabs__tab-content">
+				<div class="tab-pane" aria-hidden={selectedTab === 'clients'}>
+					<h3>Our Happy Clients</h3>
+					<p>Just some of the leading brands that trust THDC Technologies</p>
+					<div class="tab-pane__slider">
+						<button type="button" title="Show previous clients">
+							<IconChevronLeft />
+						</button>
+						<div class="tab-clients">
+							<div>
+								{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as client}
+									<svelte:component this={client} />
+								{/each}
+							</div>
+						</div>
+						<button type="button" title="Show next clients">
+							<IconChevronRight />
+						</button>
 					</div>
-					<button type="button" title="Show next clients">
-						<IconChevronRight />
-					</button>
 				</div>
-			</div>
-			<div class={`trusted-partners ${selectedTab === 'partners' ? 'in-view' : 'lg:hidden'}`}>
-				<h3>Our Trusted Partners</h3>
-				<div>
-					<button type="button" title="Show previous partners">
-						<IconChevronLeft />
-					</button>
-					<div class="partners">
-						{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as partner}
-							<svelte:component this={partner} />
-						{/each}
+				<div class="tab-pane" aria-hidden={selectedTab === 'partners'}>
+					<h3>Our Trusted Partners</h3>
+					<div class="tab-pane__slider">
+						<button type="button" title="Show previous partners">
+							<IconChevronLeft />
+						</button>
+						<div class="tab-partners">
+							<div>
+								{#each [Shopify, DigitalOcean, Shopify, DigitalOcean] as partner}
+									<svelte:component this={partner} />
+								{/each}
+							</div>
+						</div>
+						<button type="button" title="Show next partners">
+							<IconChevronRight />
+						</button>
 					</div>
-					<button type="button" title="Show next partners">
-						<IconChevronRight />
-					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="get-quote-section">
-	<div class="content-restrictor get-quote-section-restrictor">
-		<div class="text-content">
+<section id="project">
+	<div class="responsive-wrapper project-content">
+		<header class="project-content__header">
 			<h2>Have a Project in Mind?</h2>
-		</div>
-		<a href="/get-a-quote">
+		</header>
+		<a href="/get-a-quote" class="project-content__link">
 			<span>Get A Quote</span>
 			<IconCircleArrowRight />
 		</a>
