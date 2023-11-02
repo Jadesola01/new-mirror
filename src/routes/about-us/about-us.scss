@@ -55,7 +55,7 @@
 				}
 			}
 		}
-		[href='/see-all-services'] {
+		.services__link {
 			@apply text-gray-3 block max-w-max mt-[14px] mx-auto rounded-[10px] border lg:border-2 border-purple-1 font-light lg:text-[28px] lg:font-medium leading-tight;
 			span {
 				@apply inline-block mx-[18px] lg:mx-[40.5px] my-[14.5px] lg:my-[25px];

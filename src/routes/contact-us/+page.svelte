@@ -10,84 +10,91 @@
 	<title>THDC Tech - Contact Us</title>
 </svelte:head>
 
-<section class="contact-us-landing">
-	<div class="responsive-wrapper contact-us-landing-restrictor">
-		<div class="text-content">
+<section class="contact-us__landing-page">
+	<div class="responsive-wrapper contact-us__landing-page__container">
+		<div class="section__header">
 			<h1>{landing.heading}</h1>
 			<p>{landing.subHeading}</p>
 		</div>
-		<div class="socials">
+		<div class="section__socials">
 			{#each landing.socials as { icon, href }}
-				<a {href} target="_blank" rel="noopener noreferrer">
+				<a class="social-link" {href} target="_blank" rel="noopener noreferrer">
 					<svelte:component this={icon} />
 				</a>
 			{/each}
 		</div>
 	</div>
 </section>
-<section class="form-section">
-	<div class="responsive-wrapper form-section-restrictor">
+
+<section class="contact-us__form-section">
+	<div class="responsive-wrapper contact-us__form-section__container">
 		<div>
-			<div class="text-content">
+			<div class="section__header">
 				<h2>{stepSection.textContent.heading}</h2>
 				<p>{stepSection.textContent.subHeading}</p>
 			</div>
-			<div>
-				<div>
+			<div class="section__steps">
+				<div class="section__steps__indicators">
 					{#each stepSection.steps as _}
-						<div>
+						<div class="step-indicator">
 							<StepIndicatorCircle />
 							<i />
 						</div>
 					{/each}
 				</div>
-				<div class="steps-list">
+				<div class="section__steps__descriptions">
 					{#each stepSection.steps as { title, description }}
-						<div>
-							<h3>{title}</h3>
-							<p>{description}</p>
+						<div class="step">
+							<h3 class="step__title">{title}</h3>
+							<p class="step__description">{description}</p>
 						</div>
 					{/each}
 				</div>
 			</div>
 		</div>
-		<div class="form-wrapper">
-			<div>
-				<div><Inbox /></div>
-				<p>
-					Write us a few words describing your project and we'll prepare a proposal for you within <span
-						>40</span
-					> hours.
+		<div class="contact-us__form-section__container__form-wrapper">
+			<div class="form-wrapper__content">
+				<div class="form-wrapper__content__header">
+					<div class="icon-wrapper">
+						<Inbox />
+					</div>
+					<p>
+						Write us a few words describing your project and we'll prepare a proposal for you within <span
+							>40</span
+						> hours.
+					</p>
+				</div>
+				<form class="contact-us__form">
+					<div class="contact-us__form__input-group">
+						<input type="text" placeholder="Your Name" />
+						<input type="email" placeholder="Your Email" />
+						<input type="text" placeholder="Company" />
+						<input type="text" placeholder="Budget" />
+					</div>
+					<div class="contact-us__form__optionals">
+						<p>Optional</p>
+						<textarea placeholder="Project details" rows="3" />
+						<label for="document">
+							<input type="file" id="document" />
+							<div>
+								<DocumentText />
+							</div>
+							<span>Attach Document</span>
+						</label>
+					</div>
+					<button type="submit">
+						<span>Send Message</span>
+					</button>
+				</form>
+				<p class="contact-info">
+					You can also send us a mail <a
+						class="contact-info__email-link"
+						href="mailto:thdctechnologies@gmail.com">THDCtechnologies@gmail.com</a
+					> to talk to us!
 				</p>
 			</div>
-			<form class="contact-form">
-				<div>
-					<input type="text" placeholder="Your Name" />
-					<input type="email" placeholder="Your Email" />
-					<input type="text" placeholder="Company" />
-					<input type="text" placeholder="Budget" />
-				</div>
-				<div>
-					<p>Optional</p>
-					<textarea placeholder="Project details" rows="3" />
-					<label for="document">
-						<input type="file" id="document" />
-						<div>
-							<DocumentText />
-						</div>
-						<span>Attach Document</span>
-					</label>
-				</div>
-				<button type="submit">
-					<span>Send Message</span>
-				</button>
-			</form>
-			<p>
-				You can also send us a mail <a href="mailto:thdctechnologies@gmail.com"
-					>THDCtechnologies@gmail.com</a
-				> to talk to us!
-			</p>
 		</div>
 	</div>
 </section>
-<section class="placeholder-section" />
+
+<section class="blank-section" />
