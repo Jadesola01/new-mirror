@@ -1,43 +1,41 @@
-.landing {
+.home-landing-page {
 	@apply bg-[center_21px] bg-no-repeat bg-contain bg-dots lg:bg-dots-lg;
-	&-restrictor {
-		@apply lg:flex lg:flex-col relative;
-		.landing-top-section {
-			@apply lg:flex md:min-h-[calc(100vh-144px)];
-			.landing-contents {
-				@apply lg:ml-[120px] lg:my-auto z-10;
-				div {
-					@apply text-center pt-8 lg:text-left px-[37px] lg:p-0;
-					h1 {
-						@apply font-satoshi text-[31px] leading-snug font-bold mb-4 lg:text-[70px] lg:max-w-lg lg:leading-tight;
-					}
-					p {
-						@apply mb-6 text-[13px] font-light text-black lg:text-base lg:max-w-xl lg:pr-4;
-					}
+	.landing-page__content {
+		@apply relative lg:flex md:min-h-[calc(100vh-144px)];
+		&__info {
+			@apply lg:ml-[120px] lg:my-auto z-10;
+			.info-header {
+				@apply text-center pt-8 lg:text-left px-[37px] lg:p-0;
+				&__title {
+					@apply font-satoshi text-[31px] leading-snug font-bold mb-4 lg:text-[70px] lg:max-w-lg lg:leading-tight;
 				}
-				a {
-					@apply font-satoshi lg:font-cera-pro flex w-fit items-center justify-center gap-[3px] py-3 mx-auto lg:mx-0 text-xs md:text-sm md:leading-[1.3] md:gap-3 font-medium rounded-md px-7 bg-black-1 text-white-2 mb-6 md:p-[10px];
-					span {
-						@apply md:my-[6px] md:ml-[27.5px];
-					}
-					svg {
-						width: unset;
-						height: unset;
-						@apply w-[14px] aspect-square md:w-5 md:mr-[27.5px];
-					}
+				&__subtitle {
+					@apply mb-6 text-[13px] font-light text-black lg:text-base lg:max-w-xl lg:pr-4;
 				}
 			}
-			.hero-illustration-wrapper {
-				@apply lg:absolute lg:top-1/4 lg:-translate-y-1/4 lg:left-[44.30556%] lg:w-[48.125%] z-0 mx-6 lg:mx-0;
-				div {
-					@apply relative mx-auto lg:w-full pb-[calc((315/327)*100%)] lg:pb-[calc((680/693)*100%)] overflow-hidden rounded-xl lg:rounded-full bg-purple-1 bg-opacity-40;
-					img {
-						@apply absolute top-0 left-0 z-0 object-cover object-center w-full h-full;
-					}
+			.landing-page__link {
+				@apply font-satoshi lg:font-cera-pro flex w-fit items-center justify-center gap-[3px] py-3 mx-auto lg:mx-0 text-xs md:text-sm md:leading-[1.3] md:gap-3 font-medium rounded-md px-7 bg-black-1 text-white-2 mb-6 md:p-[10px];
+				span {
+					@apply md:my-[6px] md:ml-[27.5px];
+				}
+				svg {
+					width: unset;
+					height: unset;
+					@apply w-[14px] aspect-square md:w-5 md:mr-[27.5px];
 				}
 			}
 		}
-		.partners-list {
+		.landing-page__illustration {
+			@apply lg:absolute lg:top-1/4 lg:-translate-y-1/4 lg:left-[44.30556%] lg:w-[48.125%] z-0 mx-6 lg:mx-0;
+			.illustration-container {
+				@apply relative mx-auto lg:w-full pb-[calc((315/327)*100%)] lg:pb-[calc((680/693)*100%)] overflow-hidden rounded-xl lg:rounded-full bg-purple-1 bg-opacity-40;
+			}
+			img {
+				@apply absolute top-0 left-0 z-0 object-cover object-center w-full h-full;
+			}
+		}
+
+		&__partners {
 			@apply flex items-center gap-6 mt-10 mb-12 overflow-hidden -ml-6 lg:ml-0 lg:justify-center lg:gap-[62px] lg:mt-[83.44px] lg:mb-[91.56px];
 			svg {
 				@apply shrink-0;
@@ -54,24 +52,18 @@
 		}
 	}
 }
-.section-heading {
-	@apply text-xl font-bold leading-[1.25] md:text-5xl;
-}
-.section-subheading {
-	@apply mt-[10px] mb-6 text-[11px] mx-4 font-light md:text-base md:max-w-xl md:mx-auto md:px-4 md:mb-[69px];
-}
 .about-us {
 	@apply bg-white-1;
-	&-restrictor {
+	&__content {
 		@apply lg:pt-[88px] lg:pb-[114px] px-10 lg:px-0 py-8;
-		& > div {
+		.about-us__heading-container {
 			@apply text-center;
 		}
-		.doings-list {
+		&__doings {
 			@apply flex flex-col gap-6 lg:flex-row lg:mx-10 lg:justify-center lg:gap-5;
-			li {
+			.about-us__doing {
 				@apply px-5 text-black py-[30px] bg-white-2 rounded-xl text-center lg:text-left;
-				div {
+				&__icon {
 					@apply inline-block w-[50px] md:w-[70px] aspect-square rounded-xl text-purple-1 bg-purple-2 p-[10px] md:p-4 lg:mb-5;
 					svg {
 						width: unset;
@@ -79,77 +71,77 @@
 						@apply w-full;
 					}
 				}
-				h3 {
+				&__title {
 					@apply mb-2 text-lg font-medium md:text-2xl md:leading-tight md:mb-[15px];
 				}
-				p {
+				&__description {
 					@apply text-[10px] mx-[1em] md:mx-0 font-light md:text-base;
 				}
 			}
 		}
 	}
 }
-.our-works {
+.projects {
 	@apply bg-pink-1;
-	&-restrictor {
+	&__container {
 		@apply py-8 px-6 md:px-0 md:pt-[72px] md:pb-[112px];
-		& > div {
+		.projects__header {
 			@apply text-center;
 		}
-		.works-list {
+		.projects__list {
 			@apply flex flex-col gap-10 lg:gap-[130px] md:mx-10;
-			li {
-				@apply lg:flex lg:items-center;
+			.project {
+				@apply lg:flex items-center;
 				&:nth-child(odd) {
 					@apply lg:flex-row;
 				}
 				&:nth-child(even) {
 					@apply lg:flex-row-reverse;
 				}
-				.image-wrapper {
+				&__image-container {
 					@apply shrink-0 lg:w-[57.66667%];
-					div {
+					.project__image-wrapper {
 						@apply relative w-full pb-[calc((490/692)*100%)];
 						img {
 							@apply absolute top-0 left-0 object-cover object-center w-full h-full;
 						}
 					}
 				}
-				.work-description-wrapper {
+				&__details {
 					--entry: calc(57.66667% - (100% - 57.66667%));
 					@apply text-black bg-white-3 relative z-10 py-8 px-6 mx-7 lg:m-[unset] shrink-0 lg:w-[57.66667%] -mt-8 lg:mt-0 md:py-[63px] md:px-12 lg:-ml-[var(--entry)];
-					&.flipped {
+					&[data-float='true'] {
 						@apply lg:-mr-[var(--entry)];
 					}
-					h3 {
+					.project__title {
 						@apply text-lg font-medium leading-[1.25] md:text-2xl;
 					}
-					p {
+					.project__description {
 						@apply my-4 text-[10px] font-light md:text-base;
 					}
-					button {
-						@apply font-bold text-[13px] rounded-md border-0 text-white bg-purple-1 py-3 px-8   md:text-base md:py-5 md:tracking-[-0.0175em] md:px-[34px];
+					.project__link {
+						@apply inline-block font-bold text-[13px] rounded-md border-0 text-white bg-purple-1 py-3 px-8 md:text-base md:py-5 md:tracking-[-0.0175em] md:px-[34px];
 					}
 				}
 			}
 		}
 	}
 }
-.cta {
+.section {
 	@apply text-gray-2 bg-faq-dots bg-no-repeat bg-contain lg:bg-none;
-	&-restrictor {
+	&__container {
 		@apply text-center lg:pb-12 pb-[18px] lg:pt-[120px] pt-6;
-		.content-wrapper {
+		.section__inner-container {
 			@apply w-full lg:w-11/12 mx-auto lg:bg-white-2 lg:flex lg:justify-evenly lg:flex-row-reverse lg:overflow-hidden lg:rounded-[33px];
-			.illustration {
+			.illustration-wrapper {
 				@apply w-[232px] mx-auto lg:mx-0 lg:min-w-[25.71885%] lg:mt-[54px] mb-6 lg:mb-0;
 			}
-			.cta-main-contents {
+			.section__element {
 				@apply md:self-center;
-				p {
+				.section__text {
 					@apply mb-4 text-[15px] font-light leading-5 lg:leading-tight md:text-[22px] md:mb-6;
 				}
-				a {
+				.section__link {
 					@apply rounded-md text-white-2 bg-purple-1 font-satoshi text-sm font-medium inline-flex items-center justify-center gap-2 md:gap-4 py-[14px] md:py-5 px-[27px] md:px-[90px] md:text-[23px] md:leading-[1.35];
 					svg {
 						width: unset;
@@ -161,40 +153,41 @@
 		}
 	}
 }
-.our-clients {
+
+.testimonials {
 	@apply bg-center bg-no-repeat bg-cover bg-grey-lines md:bg-grey-lines-lg;
-	&-restrictor {
-		@apply pt-14 md:pt-24 md:pb-[125px] pb-8;
-		& > div {
+	&__container.responsive-wrapper {
+		@apply max-w-screen-2xl pt-14 md:pt-24 md:pb-[125px] pb-8 #{!important};
+		.testimonials__header {
 			@apply text-center;
 		}
-		.testimonials {
+		.testimonials__list {
 			@apply flex items-center w-full gap-2 p-0 overflow-auto md:gap-9;
-			li {
-				@apply flex-shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 md:pt-[70px] md:pl-[75px] md:pr-[50px] md:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal md:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 md:before:left-6 md:before:text-gray-3 last:hidden md:last:inline-block;
-				.comment-wrapper {
+			&__item {
+				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 md:pt-[70px] md:pl-[75px] md:pr-[50px] md:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal md:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 md:before:left-6 md:before:text-gray-3 last:hidden md:last:inline-block;
+				.testimonial__comment {
 					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px];
 					span {
 						@apply inline-block mx-2 md:mx-6 md:my-[16.5px];
 					}
 				}
-				.author-details {
+				.testimonial__details {
 					@apply flex items-center md:gap-4 md:mt-4;
-					.avatar-wrapper {
+					.testimonial__avatar {
 						@apply relative w-[38px] md:w-20 overflow-hidden rounded-full aspect-square;
 						img {
 							@apply absolute inset-0 object-cover object-center;
 						}
 					}
-					.author-info {
+					.testimonial__info {
 						@apply text-[9px] md:text-base md:leading-tight leading-tight px-2 md:px-[13px] md:py-[10px] py-[10px] font-light;
-						h3 {
+						.testimonial__name {
 							@apply text-[1em] font-medium;
 						}
-						p {
+						.testimonial__title-company {
 							@apply my-[2px] md:my-1;
 						}
-						div {
+						.testimonial__rating {
 							@apply text-yellow-300 flex items-center gap-px lg:gap-[3px];
 							svg {
 								width: unset;
@@ -208,29 +201,29 @@
 		}
 	}
 }
-.newsletter-subscription {
+.subscribe {
 	@apply bg-black-1 text-white-4 bg-pink-lines bg-no-repeat bg-bottom md:bg-pink-lines-lg bg-contain md:bg-[0%_100%] relative lg:before:content-confetti lg:after:content-confetti before:top-4 before:left-4 after:right-4 before:absolute after:absolute after:top-4;
-	&-restrictor {
+	&__container {
 		@apply pt-10 pb-12 md:pt-[112px] md:pb-[167px];
-		& > div {
+		&__content {
 			@apply text-center mx-[54px] md:max-w-2xl md:mx-auto;
 		}
-		form {
+		.subscribe__form {
 			@apply flex max-w-lg mx-9 md:mx-auto;
-			label {
+			.subscribe__label {
 				@apply w-full flex items-center justify-between gap-7 text-gray-3 bg-white text-[10px] md:text-base leading-none rounded-lg overflow-hidden py-[14px] md:py-[10px] px-[26px] md:font-aeonik md:leading-tight;
-				div {
+				.subscribe__input-wrapper {
 					@apply flex items-center gap-3;
 					svg {
 						width: unset;
 						height: unset;
 						@apply hidden md:inline-block w-6;
 					}
-					input {
+					input[type='email'] {
 						@apply placeholder:text-inherit;
 					}
 				}
-				button {
+				.subscribe__button {
 					@apply text-white bg-black-1 border-0 rounded-lg flex items-center gap-2 py-[10px] md:py-3 px-4 md:px-6 md:text-sm;
 					svg {
 						width: unset;

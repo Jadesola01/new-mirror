@@ -11,93 +11,84 @@
 	<title>THDC Tech</title>
 </svelte:head>
 
-<section class="landing">
-	<div class="responsive-wrapper landing-restrictor">
-		<div class="landing-top-section">
-			<div class="landing-contents">
-				<div>
-					<h1>{landing.heading}</h1>
-					<p>{landing.subHeading}</p>
-				</div>
-				<a href="/get-a-quote">
-					<span>{landing.buttonText}</span>
-					<IconChevronRight />
-				</a>
+<section class="home-landing-page">
+	<div class="responsive-wrapper landing-page__content">
+		<div class="landing-page__content__info">
+			<div class="info-header">
+				<h1 class="info-header__title">{landing.heading}</h1>
+				<p class="info-header__subtitle">{landing.subHeading}</p>
 			</div>
-			<div class="hero-illustration-wrapper">
-				<div>
-					<img src={landing.image.src} alt={landing.image.alt} loading="lazy" />
-				</div>
-			</div>
+			<a href="/get-a-quote" class="landing-page__link">
+				<span>{landing.linkLabel}</span>
+				<IconChevronRight />
+			</a>
 		</div>
-		<div class="partners-list">
-			{#each landing.partnersList as partner}
-				<svelte:component this={partner} />
-			{/each}
+		<div class="landing-page__illustration">
+			<div class="illustration-container">
+				<img class="landing__img" src={landing.image.src} alt={landing.image.alt} loading="lazy" />
+			</div>
 		</div>
 	</div>
+	<div class="landing-page__content__partners">
+		{#each landing.partnersList as partner}
+			<svelte:component this={partner} class="landing__partner" />
+		{/each}
+	</div>
 </section>
-
 <section class="about-us">
-	<div class="responsive-wrapper about-us-restrictor">
-		<div>
-			<h2 class="section-heading">
-				{aboutUs.heading}
-			</h2>
-			<p class="section-subheading">
-				{aboutUs.subHeading}
-			</p>
+	<div class="responsive-wrapper about-us__content">
+		<div class="about-us__heading-container">
+			<h2 class="section-heading">{aboutUs.heading}</h2>
+			<p class="section-subheading">{aboutUs.subHeading}</p>
 		</div>
-		<ul class="doings-list">
+		<ul class="about-us__content__doings">
 			{#each aboutUs.doings as doing}
-				<li>
-					<div>
+				<li class="about-us__doing">
+					<div class="about-us__doing__icon">
 						<svelte:component this={doing.icon} />
 					</div>
-					<h3>{doing.title}</h3>
-					<p>{doing.description}</p>
+					<h3 class="about-us__doing__title">{doing.title}</h3>
+					<p class="about-us__doing__description">{doing.description}</p>
 				</li>
 			{/each}
 		</ul>
 	</div>
 </section>
-
-<section class="our-works">
-	<div class="responsive-wrapper our-works-restrictor">
-		<div>
+<section class="projects">
+	<div class="responsive-wrapper projects__container">
+		<div class="projects__header">
 			<h2 class="section-heading">{projects.heading}</h2>
 			<p class="section-subheading">{projects.subHeading}</p>
 		</div>
-		<ul class="works-list">
+		<ul class="projects__list">
 			{#each projects.works as work}
-				<li>
-					<div class="image-wrapper">
-						<div>
+				<li class="project">
+					<div class="project__image-container">
+						<div class="project__image-wrapper">
 							<img src={work.image.src} alt={work.image.alt} loading="lazy" />
 						</div>
 					</div>
-					<div class={`work-description-wrapper${work.flip ? ' flipped' : ''}`}>
-						<h3>{work.title}</h3>
-						<p>{work.description}</p>
-						<button type="button">
-							<span>{work.btnText}</span>
-						</button>
+					<div class="project__details" data-float={Boolean(work.flipped)}>
+						<h3 class="project__title">{work.title}</h3>
+						<p class="project__description">{work.description}</p>
+						<a class="project__link" href={work.link.route}>
+							<span>{work.link.label}</span>
+						</a>
 					</div>
 				</li>
 			{/each}
 		</ul>
 	</div>
 </section>
-
-<section class="cta">
-	<div class="responsive-wrapper cta-restrictor">
-		<div class="content-wrapper">
-			<div class="illustration">
+<section class="section">
+	<div class="responsive-wrapper section__container">
+		<div class="section__inner-container">
+			<div class="illustration-wrapper">
 				<ThinkingWoman />
 			</div>
-			<div class="cta-main-contents">
-				<p>Have more questions to ask about us?</p>
-				<a href="/get-a-quote">
+			<div class="section__element">
+				<p class="section__text">Have more questions to ask about us?</p>
+				<a href="/get-a-quote" class="section__link">
 					<span>Get A Quote</span>
 					<IconCircleArrowRight />
 				</a>
@@ -105,31 +96,26 @@
 		</div>
 	</div>
 </section>
-
-<section class="our-clients">
-	<div class="our-clients-restrictor">
-		<div>
-			<h2 class="section-heading">
-				{testimonials.heading}
-			</h2>
-			<p class="section-subheading">
-				{testimonials.subHeading}
-			</p>
+<section class="testimonials">
+	<div class="responsive-wrapper testimonials__container">
+		<div class="testimonials__header">
+			<h2 class="section-heading">{testimonials.heading}</h2>
+			<p class="section-subheading">{testimonials.subHeading}</p>
 		</div>
-		<ul class="testimonials">
+		<ul class="testimonials__list">
 			{#each testimonials.testimonials as testimonial}
-				<li>
-					<p class="comment-wrapper">
+				<li class="testimonials__list__item">
+					<p class="testimonial__comment">
 						<span>{testimonial.comment}</span>
 					</p>
-					<div class="author-details">
-						<div class="avatar-wrapper">
+					<div class="testimonial__details">
+						<div class="testimonial__avatar">
 							<img src={testimonial.avatar.src} alt={testimonial.avatar.alt} />
 						</div>
-						<div class="author-info">
-							<h3>{testimonial.name}</h3>
-							<p>{testimonial.title}, {testimonial.company}</p>
-							<div>
+						<div class="testimonial__info">
+							<h3 class="testimonial__name">{testimonial.name}</h3>
+							<p class="testimonial__title-company">{testimonial.title}, {testimonial.company}</p>
+							<div class="testimonial__rating">
 								{#each testimonial.rating as rating}
 									<svelte:component this={rating} />
 								{/each}
@@ -141,7 +127,7 @@
 		</ul>
 	</div>
 </section>
-
+<!--
 <section class="newsletter-subscription">
 	<div class="responsive-wrapper newsletter-subscription-restrictor">
 		<div>
@@ -159,6 +145,27 @@
 					<input type="email" id="email" placeholder="Add your email address" autocomplete="off" />
 				</div>
 				<button type="submit">
+					<span>Subscribe</span>
+					<IconCircleArrowRight />
+				</button>
+			</label>
+		</form>
+	</div>
+</section>
+-->
+<section class="subscribe">
+	<div class="responsive-wrapper subscribe__container">
+		<div class="subscribe__container__content">
+			<h2 class="section-heading">{subscribe.heading}</h2>
+			<p class="section-subheading">{subscribe.subHeading}</p>
+		</div>
+		<form class="subscribe__form">
+			<label for="email" class="subscribe__label">
+				<div class="subscribe__input-wrapper">
+					<IconMail />
+					<input type="email" id="email" placeholder="Add your email address" autocomplete="off" />
+				</div>
+				<button type="submit" class="subscribe__button">
 					<span>Subscribe</span>
 					<IconCircleArrowRight />
 				</button>

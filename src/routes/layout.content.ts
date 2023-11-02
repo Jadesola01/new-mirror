@@ -7,13 +7,12 @@ import {
 
 export default {
 	routes: [
-		{ href: '/', label: 'Home' },
-		{ href: '/about-us', label: 'About Us' },
-		{ href: '/contact-us', label: 'Contact Us' },
-		{ href: '/products', label: 'Products' },
-		{ href: '/blog', label: 'Blog' },
-		{ href: '/faqs', label: 'FAQs' },
-		{ href: '/get-a-quote', label: 'Get A Quote' }
+		{ route: '/', label: 'Home' },
+		{ route: '/about-us', label: 'About Us' },
+		{ route: '/contact-us', label: 'Contact Us' },
+		{ route: '/products', label: 'Products' },
+		{ route: '/blog', label: 'Blog' },
+		{ route: '/faqs', label: 'FAQs' }
 	],
 	footerSection: {
 		paragraph:

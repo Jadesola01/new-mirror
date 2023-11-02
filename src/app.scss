@@ -2,19 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	font-family: Cera Pro;
-	scroll-behavior: smooth;
-}
-
-.restrict {
-	height: 100vh;
-	overflow: hidden;
-}
-
-@media (min-width: 1024px) {
-	.restrict {
-		height: unset;
-		overflow: unset;
+@layer base {
+	:root {
+		@apply scroll-smooth font-["Cera_Pro"];
+		body {
+			&.restrict {
+				@apply h-screen overflow-hidden lg:h-auto lg:overflow-auto;
+			}
+			.responsive-wrapper {
+				@apply w-full max-w-7xl mx-auto;
+				.section-heading {
+					@apply text-xl font-bold leading-[1.25] md:text-5xl;
+				}
+				.section-subheading {
+					@apply mt-[10px] mb-6 text-[11px] mx-4 font-light md:text-base md:max-w-xl md:mx-auto md:px-4 md:mb-[69px];
+				}
+			}
+		}
 	}
 }

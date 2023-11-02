@@ -1,6 +1,7 @@
 <script lang="ts">
-	export let href: string;
-	export let className: string;
+	export let to: string;
+	export let cn: string;
+	export let active: boolean;
 </script>
 
-<a {href} class={className}><slot /></a>
+<a href={to} class={cn} aria-current={active}><slot /></a>

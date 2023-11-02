@@ -10,7 +10,7 @@ export default {
 			src: 'https://images.unsplash.com/photo-1559523182-a284c3fb7cff?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%',
 			alt: ''
 		},
-		buttonText: 'Get A Quote',
+		linkLabel: 'Get A Quote',
 		partnersList: [Shopify, DigitalOcean, Shopify, DigitalOcean, Shopify, DigitalOcean]
 	},
 	aboutUs: {
@@ -37,9 +37,9 @@ export default {
 				title: 'Share love',
 				description:
 					'We are a creative and innovative design agency that is passionate about helping our clients achieve their goals. We are also committed to providing excellent customer service. You get access to a team of experienced and talented experts that are really good at what they do.',
-				btnText: 'Join the waitlist'
+				link: { route: '/get-a-quote', label: 'Join the waitlist' }
 			})
-			.map((element, i) => (i % 2 ? { ...element, flip: true } : element))
+			.map((element, i) => (i % 2 ? { ...element, flipped: true } : element))
 	},
 	testimonials: {
 		heading: 'Our Happy Clients',
