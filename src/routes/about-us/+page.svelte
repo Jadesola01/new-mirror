@@ -4,7 +4,7 @@
 	import AboutUsContents from './about-us.content';
 	import './about-us.scss';
 
-	const { landing, whatWeDo } = AboutUsContents;
+	const { hero, whatWeDo } = AboutUsContents;
 	let selectedTab = 'partners';
 </script>
 
@@ -15,20 +15,15 @@
 <section id="about-us__landing">
 	<div class="responsive-wrapper about-us__landing-content">
 		<header class="about-us__landing-content__header">
-			<h1>{landing.heading}</h1>
+			<h1>{hero.heading}</h1>
 			<div class="landing__header__subheadings">
-				<p>{landing.subHeading[0]}</p>
-				<p>{landing.subHeading[1]}</p>
+				<p>{hero.subHeading[0]}</p>
+				<p>{hero.subHeading[1]}</p>
 			</div>
 		</header>
 		<div class="about-us__landing-images">
 			<div class="about-us__landing-images__container">
-				<div class="landing__image top-image">
-					<img src={landing.images.top.src} alt={landing.images.top.alt} loading="lazy" />
-				</div>
-				<div class="landing__image bottom-image">
-					<img src={landing.images.bottom.src} alt={landing.images.bottom.alt} loading="lazy" />
-				</div>
+				<img src={hero.image.src} alt={hero.image.alt} loading="eager" />
 			</div>
 		</div>
 	</div>

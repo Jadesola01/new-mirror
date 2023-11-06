@@ -4,7 +4,7 @@
 	import HomeContents from './home.content';
 	import './home.scss';
 
-	const { landing, aboutUs, projects, testimonials, subscribe } = HomeContents;
+	const { hero, aboutUs, projects, testimonials, subscribe } = HomeContents;
 </script>
 
 <svelte:head>
@@ -15,22 +15,22 @@
 	<div class="responsive-wrapper landing-page__content">
 		<div class="landing-page__content__info">
 			<div class="info-header">
-				<h1 class="info-header__title">{landing.heading}</h1>
-				<p class="info-header__subtitle">{landing.subHeading}</p>
+				<h1 class="info-header__title">{hero.heading}</h1>
+				<p class="info-header__subtitle">{hero.subHeading}</p>
 			</div>
 			<a href="/get-a-quote" class="landing-page__link">
-				<span>{landing.linkLabel}</span>
+				<span>{hero.linkLabel}</span>
 				<IconChevronRight />
 			</a>
 		</div>
 		<div class="landing-page__illustration">
 			<div class="illustration-container">
-				<img class="landing__img" src={landing.image.src} alt={landing.image.alt} loading="lazy" />
+				<img class="landing__img" src={hero.image.src} alt={hero.image.alt} loading="eager" />
 			</div>
 		</div>
 	</div>
 	<div class="landing-page__content__partners">
-		{#each landing.partnersList as partner}
+		{#each hero.partnersList as partner}
 			<svelte:component this={partner} class="landing__partner" />
 		{/each}
 	</div>

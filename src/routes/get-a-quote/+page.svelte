@@ -3,7 +3,7 @@
 	import getAQuote from './get-a-quote.contents';
 	import './get-a-quote.scss';
 
-	const { landing } = getAQuote;
+	const { hero } = getAQuote;
 </script>
 
 <svelte:head>
@@ -14,17 +14,17 @@
 	<div class="responsive-wrapper gaq-page__responsive-wrapper">
 		<div class="landing__image-container">
 			<div>
-				<img src={landing.image.src} alt={landing.image.alt} loading="lazy" />
+				<img src={hero.image.src} alt={hero.image.alt} loading="lazy" />
 			</div>
 		</div>
 		<div class="landing__content">
 			<div class="text-container">
-				<h1>{landing.heading}</h1>
-				<p>{landing.subHeading}</p>
+				<h1>{hero.heading}</h1>
+				<p>{hero.subHeading}</p>
 			</div>
 			<div class="landing__image-container">
 				<div>
-					<img src={landing.image.src} alt={landing.image.alt} loading="lazy" />
+					<img src={hero.image.src} alt={hero.image.alt} loading="lazy" />
 				</div>
 			</div>
 			<form class="gaq-page__form">

@@ -1,13 +1,14 @@
 import { DigitalOcean, Shopify } from '$lib/assets/vectors';
 import { IconMail, IconStar, IconStarFilled } from '@tabler/icons-svelte';
+import { HomeHero } from 'src/lib/assets/images';
 
 export default {
-	landing: {
+	hero: {
 		heading: 'Design that tells your story.',
 		subHeading:
 			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
 		image: {
-			src: 'https://images.unsplash.com/photo-1559523182-a284c3fb7cff?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%',
+			src: HomeHero,
 			alt: ''
 		},
 		linkLabel: 'Get A Quote',

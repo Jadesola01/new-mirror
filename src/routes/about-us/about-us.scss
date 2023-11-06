@@ -15,17 +15,8 @@
 			@apply lg:w-[48.59375%] w-[87.2%] mx-auto lg:mx-0 mb-14;
 			&__container {
 				@apply relative w-full pb-[76.45259%];
-				.landing__image {
-					@apply absolute overflow-hidden rounded-[19px];
-					img {
-						@apply absolute top-0 left-0 w-full h-full object-cover object-center;
-					}
-					&.top-image {
-						@apply bg-purple-50 w-[83.60856%] h-[80.68%] bottom-0 right-[16.39144%];
-					}
-					&.bottom-image {
-						@apply bg-slate-50 w-[50.02446%] h-[45.988%] top-0 left-[49.97554%];
-					}
+				img {
+					@apply absolute top-0 left-0 w-full h-full object-cover object-center;
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 import { IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-svelte';
 
 export default {
-	landing: {
+	hero: {
 		heading: 'Contact us',
 		subHeading: "Looking for a trusted agency for your projects? We're here!",
 		socials: [

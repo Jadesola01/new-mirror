@@ -1,9 +1,9 @@
 .home-landing-page {
 	@apply bg-[center_21px] bg-no-repeat bg-contain bg-dots lg:bg-dots-lg;
 	.landing-page__content {
-		@apply relative lg:flex md:min-h-[calc(100vh-144px)];
+		@apply relative lg:flex items-center md:min-h-[calc(100vh-144px)];
 		&__info {
-			@apply lg:ml-[120px] lg:my-auto z-10;
+			@apply lg:ml-10 z-10;
 			.info-header {
 				@apply text-center pt-8 lg:text-left px-[37px] lg:p-0;
 				&__title {
@@ -26,9 +26,9 @@
 			}
 		}
 		.landing-page__illustration {
-			@apply lg:absolute lg:top-1/4 lg:-translate-y-1/4 lg:left-[44.30556%] lg:w-[48.125%] z-0 mx-6 lg:mx-0;
+			@apply lg:absolute top-0 left-[42%] lg:w-[58.82813%] z-0 mx-6 lg:mx-0;
 			.illustration-container {
-				@apply relative mx-auto lg:w-full pb-[calc((315/327)*100%)] lg:pb-[calc((680/693)*100%)] overflow-hidden rounded-xl lg:rounded-full bg-purple-1 bg-opacity-40;
+				@apply relative mx-auto lg:w-full pb-[calc((315/327)*100%)] lg:pb-[calc((727/753)*100%)];
 			}
 			img {
 				@apply absolute top-0 left-0 z-0 object-cover object-center w-full h-full;

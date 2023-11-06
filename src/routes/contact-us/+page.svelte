@@ -3,7 +3,7 @@
 	import contactUsContents from './contact-us.contents';
 	import './contact-us.scss';
 
-	const { landing, stepSection } = contactUsContents;
+	const { hero, stepSection } = contactUsContents;
 </script>
 
 <svelte:head>
@@ -13,11 +13,11 @@
 <section class="contact-us__landing-page">
 	<div class="responsive-wrapper contact-us__landing-page__container">
 		<div class="section__header">
-			<h1>{landing.heading}</h1>
-			<p>{landing.subHeading}</p>
+			<h1>{hero.heading}</h1>
+			<p>{hero.subHeading}</p>
 		</div>
 		<div class="section__socials">
-			{#each landing.socials as { icon, href }}
+			{#each hero.socials as { icon, href }}
 				<a class="social-link" {href} target="_blank" rel="noopener noreferrer">
 					<svelte:component this={icon} />
 				</a>
