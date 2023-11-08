@@ -1,4 +1,6 @@
-<script lang="ts">
+<script lang='ts'>
+	import LayoutContents from 'src/routes/layout.content';
+	import { Backdrop, NavLink } from 'src/lib/components';
 	import { page } from '$app/stores';
 	import { THDCTechLogo } from '$lib/assets/vectors';
 	import { IconMenu2, IconX } from '@tabler/icons-svelte';
@@ -55,6 +57,7 @@
 		<div class="footer__social">
 			<p class="footer__social-label">FOLLOW US</p>
 			<div class="footer__social-icons">
+
 				{#each footerSection.socials as { href, label, icon }}
 					<a {href} aria-label={label} class="footer__social-link">
 						<svelte:component this={icon} class="footer__social-icon" />
