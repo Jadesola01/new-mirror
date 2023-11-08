@@ -1,17 +1,10 @@
-import DocumentText from './icons/document-text.svg?component';
-import Inbox from './icons/inbox.svg?component';
-import StepIndicatorCircle from './icons/step-indicator-circle.svg?component';
-import ThinkingWoman from './illustrations/thinkingWoman.svg?component';
-import DigitalOcean from './logos/digitalOcean.svg?component';
-import Shopify from './logos/shopify.svg?component';
-import THDCTechLogo from './logos/thdcTech.svg?component';
-
-export {
-	DigitalOcean,
-	DocumentText,
-	Inbox,
-	Shopify,
-	StepIndicatorCircle,
-	THDCTechLogo,
-	ThinkingWoman
-};
+export { default as IconInbox } from './icons/inbox.svg?component';
+export { default as IconTextDocument } from './icons/text-document.svg?component';
+export { default as DigitalOceanLogo } from './logos/digitalOcean.svg?component';
+export { default as ShopifyLogo } from './logos/shopify.svg?component';
+export { default as THDCTechLogo } from './logos/thdcTech.svg?component';
+export { default as SVG0 } from './svg_0.svg?url';
+export { default as SVG1 } from './svg_1.svg?component';
+export { default as SVG2 } from './svg_2.svg?component';
+export { default as SVG3 } from './svg_3.svg?component';
+export { default as SVG4 } from './svg_4.svg?component';

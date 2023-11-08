@@ -87,10 +87,10 @@
 					</button>
 				</form>
 				<p class="contact-info">
-					You can also send us a mail <a
+					You can also send us a mail&nbsp;<a
 						class="contact-info__email-link"
-						href="mailto:thdctechnologies@gmail.com">THDCtechnologies@gmail.com</a
-					> to talk to us!
+						href="mailto:contact@thdctech.com">contact@thdctech.com</a
+					>&nbsp;to talk to us!
 				</p>
 			</div>
 		</div>

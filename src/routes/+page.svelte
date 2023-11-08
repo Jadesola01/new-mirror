@@ -1,5 +1,5 @@
 <script>
-	import { ThinkingWoman } from '$lib/assets/vectors';
+	import { SVG1 } from '$lib/assets/vectors';
 	import { IconChevronRight, IconCircleArrowRight, IconMail } from '@tabler/icons-svelte';
 	import HomeContents from './home.content';
 	import './home.scss';
@@ -15,7 +15,10 @@
 	<div class="responsive-wrapper landing-page__content">
 		<div class="landing-page__content__info">
 			<div class="info-header">
-				<h1 class="info-header__title">{hero.heading}</h1>
+				<h1 class="info-header__title">
+					All-in-one <span class="highlighted">solution</span> for successful
+					<span class="custom-decoration">E-commerce</span> stores.
+				</h1>
 				<p class="info-header__subtitle">{hero.subHeading}</p>
 			</div>
 			<a href="/get-a-quote" class="landing-page__link">
@@ -38,8 +41,8 @@
 <section class="about-us">
 	<div class="responsive-wrapper about-us__content">
 		<div class="about-us__heading-container">
-			<h2 class="section-heading">{aboutUs.heading}</h2>
-			<p class="section-subheading">{aboutUs.subHeading}</p>
+			<h2>-&nbsp;{aboutUs.heading}&nbsp;-</h2>
+			<p>{aboutUs.subHeading}</p>
 		</div>
 		<ul class="about-us__content__doings">
 			{#each aboutUs.doings as doing}
@@ -65,14 +68,14 @@
 				<li class="project">
 					<div class="project__image-container">
 						<div class="project__image-wrapper">
-							<img src={work.image.src} alt={work.image.alt} loading="lazy" />
+							<img src={work.img.src} alt={work.img.alt} loading="lazy" />
 						</div>
 					</div>
-					<div class="project__details" data-float={Boolean(work.flipped)}>
+					<div class="project__details" data-flipped={Boolean(work.flipped)}>
 						<h3 class="project__title">{work.title}</h3>
 						<p class="project__description">{work.description}</p>
-						<a class="project__link" href={work.link.route}>
-							<span>{work.link.label}</span>
+						<a class="project__link" href={work.route.to}>
+							<span>{work.route.title}</span>
 						</a>
 					</div>
 				</li>
@@ -84,10 +87,15 @@
 	<div class="responsive-wrapper section__container">
 		<div class="section__inner-container">
 			<div class="illustration-wrapper">
-				<ThinkingWoman />
+				<SVG1 />
 			</div>
 			<div class="section__element">
-				<p class="section__text">Have more questions to ask about us?</p>
+				<div>
+					<h2>Have more questions to ask about us?</h2>
+					<p>
+						Contact us today to learn more about how we can help you with your E-commerce store.
+					</p>
+				</div>
 				<a href="/get-a-quote" class="section__link">
 					<span>Get A Quote</span>
 					<IconCircleArrowRight />
@@ -110,7 +118,7 @@
 					</p>
 					<div class="testimonial__details">
 						<div class="testimonial__avatar">
-							<img src={testimonial.avatar.src} alt={testimonial.avatar.alt} />
+							<img src={testimonial.img.src} alt={testimonial.img.alt} />
 						</div>
 						<div class="testimonial__info">
 							<h3 class="testimonial__name">{testimonial.name}</h3>
@@ -127,32 +135,6 @@
 		</ul>
 	</div>
 </section>
-<!--
-<section class="newsletter-subscription">
-	<div class="responsive-wrapper newsletter-subscription-restrictor">
-		<div>
-			<h2 class="section-heading">
-				{subscribe.heading}
-			</h2>
-			<p class="section-subheading">
-				{subscribe.subHeading}
-			</p>
-		</div>
-		<form>
-			<label for="email">
-				<div>
-					<IconMail />
-					<input type="email" id="email" placeholder="Add your email address" autocomplete="off" />
-				</div>
-				<button type="submit">
-					<span>Subscribe</span>
-					<IconCircleArrowRight />
-				</button>
-			</label>
-		</form>
-	</div>
-</section>
--->
 <section class="subscribe">
 	<div class="responsive-wrapper subscribe__container">
 		<div class="subscribe__container__content">

@@ -16,7 +16,7 @@ export default {
 	],
 	footerSection: {
 		paragraph:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit mi, euismod proin turpis malesuada montes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit mi, euismod proin turpis malesuada montes.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit mi, euismod pro',
+			"We're a team of experienced E-commerce platforms professionals who are passionate about helping businesses succeed. We are dedicated to providing our clients with the tools and resources they need to succeed. We're so confident that you'll be happy with our E-commerce development services that we offer a 100% satisfaction guarantee.",
 		socials: [
 			{
 				href: 'https://twitter.com/thdctech',

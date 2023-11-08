@@ -33,7 +33,11 @@ export default {
 				'dots-about-us': 'url(/backgrounds/dots-about-us.svg)',
 				'dots-about-us-lg': 'url(/backgrounds/dots-about-us-lg.svg)'
 			},
-			content: { confetti: 'url(/backgrounds/confetti.svg)' },
+			content: {
+				confetti: 'url(/backgrounds/confetti.svg)',
+				underline: 'url(/vectors/svg_0.svg)',
+				'underline-lg': 'url(/vectors/svg_1.svg)'
+			},
 			fontFamily: {
 				satoshi: 'Satoshi',
 				charm: 'Charm',

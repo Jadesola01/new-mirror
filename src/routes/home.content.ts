@@ -1,57 +1,96 @@
-import { DigitalOcean, Shopify } from '$lib/assets/vectors';
+import { IMG0, IMG1, IMG2, IMG4, IMG5, IMG6 } from '$lib/assets/images';
+import { DigitalOceanLogo, SVG0, ShopifyLogo } from '$lib/assets/vectors';
 import { IconMail, IconStar, IconStarFilled } from '@tabler/icons-svelte';
-import { HomeHero } from 'src/lib/assets/images';
 
 export default {
 	hero: {
-		heading: 'Design that tells your story.',
+		heading: 'All-in-one solution for successful E-commerce stores.',
 		subHeading:
-			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
+			'More than just an agency, we help businesses of all sizes create and grow their e-commerce stores with our innovative apps, themes, and expert support.',
 		image: {
-			src: HomeHero,
+			src: SVG0,
 			alt: ''
 		},
 		linkLabel: 'Get A Quote',
-		partnersList: [Shopify, DigitalOcean, Shopify, DigitalOcean, Shopify, DigitalOcean]
+		partnersList: [
+			ShopifyLogo,
+			DigitalOceanLogo,
+			ShopifyLogo,
+			DigitalOceanLogo,
+			ShopifyLogo,
+			DigitalOceanLogo
+		]
 	},
 	aboutUs: {
-		heading: "It's more than an agency",
-		subHeading:
-			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
-		doings: Array(3).fill({
-			icon: IconMail,
-			title: "It's more than an agency.",
-			description:
-				"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success."
-		})
+		heading: 'why choose us',
+		subHeading: 'More than an agency, we are Your Partner in Success',
+		doings: [
+			{
+				icon: IconMail,
+				title: 'Our expertise',
+				description:
+					'We have a deep understanding of popular e-commerce platforms like Shopify and woocommerce.'
+			},
+			{
+				icon: IconMail,
+				title: 'Proven track record',
+				description:
+					'We have helped and are still helping hundreds of businesses succeed online with their e-commerce stores.'
+			},
+			{
+				icon: IconMail,
+				title: 'Our passion',
+				description:
+					'We are committed to providing our customers with the highest quality services possible'
+			}
+		]
 	},
 	projects: {
-		heading: "It's more than an agency",
-		subHeading:
-			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
-		works: Array(3)
-			.fill({
-				image: {
-					src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+		heading: 'what we offer',
+		subHeading: 'E-commerce Solutions for Businesses of All Sizes',
+		works: [
+			{
+				img: {
+					src: IMG0,
 					alt: ''
 				},
-				title: 'Share love',
+				title: 'Design',
 				description:
-					'We are a creative and innovative design agency that is passionate about helping our clients achieve their goals. We are also committed to providing excellent customer service. You get access to a team of experienced and talented experts that are really good at what they do.',
-				link: { route: '/get-a-quote', label: 'Join the waitlist' }
-			})
-			.map((element, i) => (i % 2 ? { ...element, flipped: true } : element))
+					"Your E-commerce store is the face of your business online, so it's important to make a good first impression. A well-designed store is easy to navigate, visually appealing, and optimized for conversions.",
+				route: { to: '/contact-us', title: 'Get more details' }
+			},
+			{
+				img: {
+					src: IMG1,
+					alt: ''
+				},
+				title: 'Development',
+				description:
+					"We understand that every business is different, so we tailor our E-commerce development services to meet your specific needs and budget. We'll work with you to understand your goals and develop a plan to help you achieve them. Whether you're just starting out with Shopify or you're looking to take your store to the next level, we can help!",
+				route: { to: '/contact-us', title: 'Contact us now' }
+			},
+			{
+				img: {
+					src: IMG2,
+					alt: ''
+				},
+				title: 'Design',
+				description:
+					"Your E-commerce store is the face of your business online, so it's important to make a good first impression. A well-designed store is easy to navigate, visually appealing, and optimized for conversions.",
+				route: { to: '/contact-us', title: 'Find out how' }
+			}
+		].map((work, i) => ({ ...work, flipped: Boolean(i % 2) }))
 	},
 	testimonials: {
 		heading: 'Our Happy Clients',
 		subHeading:
-			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success.",
+			'At THDC Technologies, we are committed to providing our clients with the best possible experience. We are proud to say that our clients love working with us, and they have given us rave reviews.',
 		testimonials: [
 			{
 				comment:
 					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
-				avatar: {
-					src: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+				img: {
+					src: IMG4,
 					alt: ''
 				},
 				name: 'Johnson B. Steven',
@@ -61,45 +100,45 @@ export default {
 			},
 			{
 				comment:
-					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
-				avatar: {
-					src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					'I was so impressed with the quality of work that THDC Technologies did for me. They were able to take my vision and turn it into a reality. I highly recommend them to anyone looking for a professional and reliable web development company.',
+				img: {
+					src: IMG5,
 					alt: ''
 				},
-				name: 'Johnson B. Steven',
-				title: 'CEO',
-				company: 'Stripe',
+				name: 'Jane Doe',
+				title: 'Owner',
+				company: 'Jane Doe Photography',
 				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
 			},
 			{
 				comment:
-					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
-				avatar: {
-					src: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					'We were struggling to grow our online sales, but after working with the team, we saw a significant increase in traffic and conversions. They are experts in the field, and they helped us develop a strategy that worked for our business.',
+				img: {
+					src: IMG6,
 					alt: ''
 				},
-				name: 'Johnson B. Steven',
-				title: 'CEO',
-				company: 'Stripe',
-				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+				name: 'Peter Jones',
+				title: 'Marketing Manager',
+				company: 'Jones & Associates',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled]
 			},
 			{
 				comment:
-					'I am so grateful for the work that [agency name] has done for me. I highly recommend them to anyone looking for a talented and reliable design agency.',
-				avatar: {
-					src: 'https://images.unsplash.com/photo-1506863530036-1efeddceb993?auto=format&fit=crop&q=80&w=1944&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					"We've been working with the team at  THDC Technologies for over a year now, and we've been extremely happy with their services. They are always responsive to our needs, and they go the extra mile to help us succeed.",
+				img: {
+					src: IMG4,
 					alt: ''
 				},
-				name: 'Johnson B. Steven',
+				name: 'John Smith',
 				title: 'CEO',
-				company: 'Stripe',
-				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStar]
+				company: 'Acme Corporation',
+				rating: [IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled, IconStarFilled]
 			}
 		]
 	},
 	subscribe: {
 		heading: 'Be among those that hear from us first.',
 		subHeading:
-			"It's more than just an agency. It's a community of like-minded individuals who are all working towards the same goal: success."
+			'Sign up for our email list to get first-hand information about new products, special offers, and expert advice that can help you take your E-commerce store to the next level.'
 	}
 };

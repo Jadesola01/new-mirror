@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 615 735" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="30" cy="525" r="30" fill="#E04472"/>
+<circle cx="506" cy="49" r="35" fill="url(#paint0_linear_396_5963)"/>
+<circle cx="506" cy="49" r="48.5" stroke="url(#paint1_linear_396_5963)"/>
+<path d="M615 663V735H541C540.994 725.547 542.903 716.185 546.619 707.45C550.335 698.715 555.785 690.778 562.657 684.091C569.529 677.405 577.689 672.1 586.67 668.482C595.652 664.863 605.278 663 615 663Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_396_5963" x1="456.263" y1="14" x2="496.789" y2="91.3688" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="#6E5DE7"/>
+</linearGradient>
+<linearGradient id="paint1_linear_396_5963" x1="535.5" y1="11" x2="483" y2="64.5" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.979167" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
