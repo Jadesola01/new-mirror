@@ -1,6 +1,6 @@
 <script>
-	import { SVG1 } from '$lib/assets/vectors';
-	import { IconChevronRight, IconCircleArrowRight, IconMail } from '@tabler/icons-svelte';
+	import { SVG1, IconChevronRight } from '$lib/assets/vectors';
+	import { IconCircleArrowRight, IconMail } from '@tabler/icons-svelte';
 	import HomeContents from './home.content';
 	import './home.scss';
 
@@ -22,8 +22,10 @@
 				<p class="info-header__subtitle">{hero.subHeading}</p>
 			</div>
 			<a href="/get-a-quote" class="landing-page__link">
-				<span>{hero.linkLabel}</span>
-				<IconChevronRight />
+				<span>Get A Quote</span>
+				<div>
+					<IconChevronRight />
+				</div>
 			</a>
 		</div>
 		<div class="landing-page__illustration">
@@ -41,7 +43,7 @@
 <section class="about-us">
 	<div class="responsive-wrapper about-us__content">
 		<div class="about-us__heading-container">
-			<h2>-&nbsp;{aboutUs.heading}&nbsp;-</h2>
+			<h2>-{aboutUs.heading}-</h2>
 			<p>{aboutUs.subHeading}</p>
 		</div>
 		<ul class="about-us__content__doings">
@@ -60,8 +62,8 @@
 <section class="projects">
 	<div class="responsive-wrapper projects__container">
 		<div class="projects__header">
-			<h2 class="section-heading">{projects.heading}</h2>
-			<p class="section-subheading">{projects.subHeading}</p>
+			<h2>-{projects.heading}-</h2>
+			<p>{projects.subHeading}</p>
 		</div>
 		<ul class="projects__list">
 			{#each projects.works as work}
@@ -76,6 +78,9 @@
 						<p class="project__description">{work.description}</p>
 						<a class="project__link" href={work.route.to}>
 							<span>{work.route.title}</span>
+							<div>
+								<IconChevronRight />
+							</div>
 						</a>
 					</div>
 				</li>

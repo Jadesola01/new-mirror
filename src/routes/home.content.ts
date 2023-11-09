@@ -1,6 +1,6 @@
 import { IMG0, IMG1, IMG2, IMG4, IMG5, IMG6 } from '$lib/assets/images';
-import { DigitalOceanLogo, SVG0, ShopifyLogo } from '$lib/assets/vectors';
-import { IconMail, IconStar, IconStarFilled } from '@tabler/icons-svelte';
+import { DigitalOceanLogo, SVG0, ShopifyLogo, IconMessage } from '$lib/assets/vectors';
+import { IconStar, IconStarFilled } from '@tabler/icons-svelte';
 
 export default {
 	hero: {
@@ -26,19 +26,19 @@ export default {
 		subHeading: 'More than an agency, we are Your Partner in Success',
 		doings: [
 			{
-				icon: IconMail,
+				icon: IconMessage,
 				title: 'Our expertise',
 				description:
 					'We have a deep understanding of popular e-commerce platforms like Shopify and woocommerce.'
 			},
 			{
-				icon: IconMail,
+				icon: IconMessage,
 				title: 'Proven track record',
 				description:
 					'We have helped and are still helping hundreds of businesses succeed online with their e-commerce stores.'
 			},
 			{
-				icon: IconMail,
+				icon: IconMessage,
 				title: 'Our passion',
 				description:
 					'We are committed to providing our customers with the highest quality services possible'

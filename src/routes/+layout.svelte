@@ -36,8 +36,8 @@
 				</NavLink>
 			{/each}
 		</nav>
-		<a href="/get-a-quote" class="header__container__quote-link">
-			<span>Get A Quote</span>
+		<a href="/contact-us" class="header__container__quote-link">
+			<span>Contact Us</span>
 		</a>
 	</div>
 </header>

@@ -21,7 +21,7 @@
 			}
 		}
 		&__quote-link {
-			@apply hidden rounded-md lg:inline-block py-4 px-[49px] font-bold text-white-2 bg-black-1 text-sm leading-tight shrink-0;
+			@apply hidden rounded-md lg:inline-block py-4 px-[49px] font-bold text-white-2 bg-gradient-to-b from-black via-black to-purple-1 text-sm leading-tight shrink-0;
 		}
 	}
 }
