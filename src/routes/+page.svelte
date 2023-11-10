@@ -1,6 +1,5 @@
 <script>
-	import { SVG1, IconChevronRight } from '$lib/assets/vectors';
-	import { IconCircleArrowRight, IconMail } from '@tabler/icons-svelte';
+	import { IconChevronRight, IconCircleArrowRight, IconMessage, SVG1 } from '$lib/assets/vectors';
 	import HomeContents from './home.content';
 	import './home.scss';
 
@@ -95,7 +94,7 @@
 				<SVG1 />
 			</div>
 			<div class="section__element">
-				<div>
+				<div class="section__description">
 					<h2>Have more questions to ask about us?</h2>
 					<p>
 						Contact us today to learn more about how we can help you with your E-commerce store.
@@ -103,7 +102,9 @@
 				</div>
 				<a href="/get-a-quote" class="section__link">
 					<span>Get A Quote</span>
-					<IconCircleArrowRight />
+					<div>
+						<IconCircleArrowRight />
+					</div>
 				</a>
 			</div>
 		</div>
@@ -149,7 +150,7 @@
 		<form class="subscribe__form">
 			<label for="email" class="subscribe__label">
 				<div class="subscribe__input-wrapper">
-					<IconMail />
+					<IconMessage />
 					<input type="email" id="email" placeholder="Add your email address" autocomplete="off" />
 				</div>
 				<button type="submit" class="subscribe__button">

@@ -1,6 +1,11 @@
 <script lang="ts">
-	import { IconChevronLeft, IconChevronRight, IconCircleArrowRight } from '@tabler/icons-svelte';
-	import { DigitalOceanLogo, ShopifyLogo } from 'src/lib/assets/vectors';
+	import { IconChevronLeft } from '@tabler/icons-svelte';
+	import {
+		DigitalOceanLogo,
+		IconChevronRight,
+		IconCircleArrowRight,
+		ShopifyLogo
+	} from 'src/lib/assets/vectors';
 	import AboutUsContents from './about-us.content';
 	import './about-us.scss';
 

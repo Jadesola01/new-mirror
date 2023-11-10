@@ -86,18 +86,18 @@
 .projects {
 	@apply bg-pink-1;
 	&__container {
-		@apply py-8 px-6 md:px-0 md:pt-[72px] md:pb-[112px];
+		@apply pt-8 pb-[34px] lg:pt-[72px] lg:pb-[67px];
 		.projects__header {
 			@apply text-center;
 			h2 {
-				@apply text-xs leading-tight tracking-[0.33333em] text-gray-6 uppercase lg:text-[15px] lg:leading-tight;
+				@apply uppercase font-medium text-xs lg:text-[15px] leading-tight text-gray-6 tracking-[0.41667em];
 			}
 			p {
-				@apply mt-3 mb-10 text-[22px] text-black-1 font-bold leading-tight;
+				@apply font-bold text-black-1 text-[22px] leading-tight lg:text-5xl lg:leading-tight mt-3 lg:mt-4 mb-6 lg:mb-16 lg:max-w-[45%] lg:mx-auto;
 			}
 		}
 		.projects__list {
-			@apply flex flex-col gap-10 lg:gap-[130px] md:mx-10;
+			@apply flex flex-col gap-10 lg:gap-[130px] lg:w-[93.75%] lg:mx-auto mx-6;
 			.project {
 				@apply lg:flex items-center;
 				&:nth-child(odd) {
@@ -117,7 +117,7 @@
 				}
 				&__details {
 					--entry: calc(57.66667% - (100% - 57.66667%));
-					@apply text-black text-center bg-white-3 relative z-10 py-8 px-6 mx-7 lg:m-[unset] shrink-0 lg:w-[57.66667%] -mt-8 lg:mt-0 md:py-[63px] md:px-12 lg:-ml-[var(--entry)];
+					@apply text-black text-center lg:text-left bg-white-3 relative z-10 p-6 pb-8 lg:m-0 shrink-0 w-[82.87462%] mx-auto lg:w-[57.66667%] -mt-8 lg:mt-0 lg:pt-16 lg:pb-[75px] lg:px-12 lg:-ml-[var(--entry)];
 					&[data-flipped='true'] {
 						@apply lg:-mr-[var(--entry)];
 						.project__link {
@@ -125,13 +125,13 @@
 						}
 					}
 					.project__title {
-						@apply text-lg font-medium leading-[1.25] md:text-2xl;
+						@apply text-lg font-medium leading-tight lg:text-2xl lg:leading-tight;
 					}
 					.project__description {
-						@apply my-4 text-[10px] font-light md:text-base;
+						@apply my-3 lg:my-6 text-[10px] font-light lg:text-base;
 					}
 					.project__link {
-						@apply inline-flex items-center justify-center gap-1.5 lg:gap-3 font-bold text-[13px] rounded-md border-0 text-white bg-black-1 py-3 px-8 md:text-base md:py-5 md:tracking-[-0.0175em] md:px-[34px];
+						@apply w-[76.23318%] lg:w-auto inline-flex items-center justify-center gap-1.5 lg:gap-3 font-bold text-xs lg:text-sm lg:leading-tight leading-tight rounded-md text-white bg-black-1 py-[12.5px] px-[27.5px] lg:py-[17.5px] lg:px-[23.5px];
 						div {
 							@apply w-3.5 lg:w-5;
 						}
@@ -142,25 +142,28 @@
 	}
 }
 .section {
-	@apply text-gray-2 bg-faq-dots bg-no-repeat bg-contain lg:bg-none;
+	@apply text-gray-2 bg-white-2 lg:bg-transparent;
 	&__container {
-		@apply text-center lg:pb-12 pb-[18px] lg:pt-[120px] pt-6;
+		@apply text-center lg:text-left py-12 lg:pt-24 lg:pb-16;
 		.section__inner-container {
-			@apply w-full lg:w-11/12 mx-auto lg:bg-white-2 lg:flex lg:justify-evenly lg:flex-row-reverse lg:overflow-hidden lg:rounded-[33px];
+			@apply w-full lg:w-[97.8125%] mx-auto lg:bg-white-2 lg:flex lg:justify-evenly lg:flex-row-reverse lg:overflow-hidden lg:rounded-[33px];
 			.illustration-wrapper {
-				@apply w-[232px] mx-auto lg:mx-0 lg:min-w-[25.71885%] lg:mt-[54px] mb-6 lg:mb-0;
+				@apply w-[58.13333%] lg:shrink-0 mx-auto lg:mx-0 lg:w-[29.63259%] lg:mt-[54px] mb-12 lg:mb-0;
 			}
 			.section__element {
-				@apply md:self-center;
-				.section__text {
-					@apply mb-4 text-[15px] font-light leading-5 lg:leading-tight md:text-[22px] md:mb-6;
+				@apply lg:self-center;
+				.section__description {
+					h2 {
+						@apply font-medium leading-tight;
+					}
+					p {
+						@apply mt-3 mb-4 text-xs leading-tight font-light mx-auto max-w-[50%] lg:max-w-none;
+					}
 				}
 				.section__link {
-					@apply rounded-md text-white-2 bg-purple-1 font-satoshi text-sm font-medium inline-flex items-center justify-center gap-2 md:gap-4 py-[14px] md:py-5 px-[27px] md:px-[90px] md:text-[23px] md:leading-[1.35];
-					svg {
-						width: unset;
-						height: unset;
-						@apply w-4 aspect-square md:w-[22px];
+					@apply rounded-md text-white-2 bg-purple-1 text-lg leading-tight font-medium inline-flex items-center justify-center gap-2.5 lg:gap-4 py-[13.5px] lg:py-5 px-6 lg:px-[90px] lg:text-[23px] lg:leading-[1.35];
+					div {
+						@apply w-[18px] lg:w-[22px];
 					}
 				}
 			}

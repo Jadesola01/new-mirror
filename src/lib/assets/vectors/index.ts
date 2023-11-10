@@ -1,4 +1,5 @@
 export { default as IconChevronRight } from './icons/chevron-right.svg?component';
+export { default as IconCircleArrowRight } from './icons/circle-arrow-right.svg?component';
 export { default as IconInbox } from './icons/inbox.svg?component';
 export { default as IconMessage } from './icons/message.svg?component';
 export { default as IconTextDocument } from './icons/text-document.svg?component';
