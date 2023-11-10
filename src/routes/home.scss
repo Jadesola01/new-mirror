@@ -146,22 +146,22 @@
 	&__container {
 		@apply text-center lg:text-left py-12 lg:pt-24 lg:pb-16;
 		.section__inner-container {
-			@apply w-full lg:w-[97.8125%] mx-auto lg:bg-white-2 lg:flex lg:justify-evenly lg:flex-row-reverse lg:overflow-hidden lg:rounded-[33px];
+			@apply w-full lg:w-[97.8125%] mx-auto lg:bg-white-2 flex flex-col items-center lg:justify-center gap-12 lg:flex-row-reverse lg:overflow-hidden lg:gap-[151px] lg:rounded-[33px];
 			.illustration-wrapper {
-				@apply w-[58.13333%] lg:shrink-0 mx-auto lg:mx-0 lg:w-[29.63259%] lg:mt-[54px] mb-12 lg:mb-0;
+				@apply w-[58.13333%] shrink-0 lg:w-[29.63259%] lg:mt-3.5 lg:-mb-[27px];
 			}
 			.section__element {
-				@apply lg:self-center;
+				@apply shrink-0 lg:w-[33.94569%];
 				.section__description {
 					h2 {
-						@apply font-medium leading-tight;
+						@apply font-medium leading-tight lg:text-2xl lg:leading-tight;
 					}
 					p {
-						@apply mt-3 mb-4 text-xs leading-tight font-light mx-auto max-w-[50%] lg:max-w-none;
+						@apply mt-3 mb-4 lg:mb-6 text-xs lg:text-[15px] leading-tight font-light mx-auto w-1/2 lg:w-auto lg:mx-0;
 					}
 				}
 				.section__link {
-					@apply rounded-md text-white-2 bg-purple-1 text-lg leading-tight font-medium inline-flex items-center justify-center gap-2.5 lg:gap-4 py-[13.5px] lg:py-5 px-6 lg:px-[90px] lg:text-[23px] lg:leading-[1.35];
+					@apply lg:font-satoshi rounded-md text-white-2 bg-purple-1 text-lg leading-tight font-medium inline-flex items-center justify-center gap-2.5 lg:gap-4 py-[13.5px] lg:py-[20.5px] px-6 lg:px-[71.5px] lg:text-[23px] lg:leading-[1.35];
 					div {
 						@apply w-[18px] lg:w-[22px];
 					}
@@ -174,19 +174,22 @@
 .testimonials {
 	@apply bg-center bg-no-repeat bg-cover bg-grey-lines md:bg-grey-lines-lg;
 	&__container.responsive-wrapper {
-		@apply max-w-screen-2xl pt-14 md:pt-24 md:pb-[125px] pb-8 #{!important};
+		@apply max-w-screen-2xl pt-14 lg:pt-[72px] lg:pb-[109px] pb-8 #{!important};
 		.testimonials__header {
-			@apply text-center;
+			@apply text-center mb-[30px];
+			h2 {
+				@apply text-xl font-bold leading-[1.25] md:text-5xl mb-2.5;
+			}
+			p {
+				@apply text-[11px] leading-normal w-[72.8%] mx-auto font-light lg:text-base lg:w-auto lg:px-4 lg:mb-[69px];
+			}
 		}
 		.testimonials__list {
-			@apply flex items-center w-full gap-2 p-0 overflow-auto md:gap-9;
+			@apply flex w-full gap-2 p-0 overflow-auto lg:gap-9;
 			&__item {
-				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 md:pt-[70px] md:pl-[75px] md:pr-[50px] md:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal md:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 md:before:left-6 md:before:text-gray-3 last:hidden md:last:inline-block;
+				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 lg:pt-[70px] lg:pl-[75px] lg:pr-[50px] lg:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal lg:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 lg:before:left-6 lg:before:text-gray-3;
 				.testimonial__comment {
-					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px];
-					span {
-						@apply inline-block mx-2 md:mx-6 md:my-[16.5px];
-					}
+					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px] lg:py-[26.5px] px-2 lg:px-6 max-h-20 overflow-y-auto;
 				}
 				.testimonial__details {
 					@apply flex items-center md:gap-4 md:mt-4;
@@ -221,31 +224,33 @@
 .subscribe {
 	@apply bg-black-1 text-white-4 bg-pink-lines bg-no-repeat bg-bottom md:bg-pink-lines-lg bg-contain md:bg-[0%_100%] relative lg:before:content-confetti lg:after:content-confetti before:top-4 before:left-4 after:right-4 before:absolute after:absolute after:top-4;
 	&__container {
-		@apply pt-10 pb-12 md:pt-[112px] md:pb-[167px];
+		@apply pt-10 pb-[47px] lg:pt-[112px] lg:pb-[167px];
 		&__content {
-			@apply text-center mx-[54px] md:max-w-2xl md:mx-auto;
+			@apply text-center mb-8;
+			h2 {
+				@apply text-xl leading-tight font-bold w-3/5 mx-auto mb-2.5;
+			}
+			p {
+				@apply text-[11px] leading-normal font-light w-[79.2%] mx-auto;
+			}
 		}
 		.subscribe__form {
-			@apply flex max-w-lg mx-9 md:mx-auto;
+			@apply flex w-4/5 mx-auto lg:w-auto font-light;
 			.subscribe__label {
-				@apply w-full flex items-center justify-between gap-7 text-gray-3 bg-white text-[10px] md:text-base leading-none rounded-lg overflow-hidden py-[14px] md:py-[10px] px-[26px] md:font-aeonik md:leading-tight;
+				@apply w-full flex items-center justify-center gap-5 text-gray-3 bg-white text-[10px] lg:text-base leading-tight rounded-lg overflow-hidden py-[12.5px] lg:py-[10px] lg:font-aeonik lg:leading-tight;
 				.subscribe__input-wrapper {
-					@apply flex items-center gap-3;
-					svg {
-						width: unset;
-						height: unset;
-						@apply hidden md:inline-block w-6;
+					@apply flex items-center gap-2 lg:gap-3;
+					div {
+						@apply w-4 lg:w-6;
 					}
-					input[type='email'] {
-						@apply placeholder:text-inherit;
+					input {
+						@apply text-xs leading-tight placeholder:text-inherit;
 					}
 				}
 				.subscribe__button {
-					@apply text-white bg-black-1 border-0 rounded-lg flex items-center gap-2 py-[10px] md:py-3 px-4 md:px-6 md:text-sm;
-					svg {
-						width: unset;
-						height: unset;
-						@apply w-5 md:w-6;
+					@apply text-white bg-black-1 border-0 rounded-[5px] flex items-center gap-1.5 py-[11.5px] lg:py-3 px-[15.5px] lg:px-6 lg:text-sm;
+					div {
+						@apply w-3 lg:w-6;
 					}
 				}
 			}

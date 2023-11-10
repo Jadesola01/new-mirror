@@ -113,8 +113,8 @@
 <section class="testimonials">
 	<div class="responsive-wrapper testimonials__container">
 		<div class="testimonials__header">
-			<h2 class="section-heading">{testimonials.heading}</h2>
-			<p class="section-subheading">{testimonials.subHeading}</p>
+			<h2>{testimonials.heading}</h2>
+			<p>{testimonials.subHeading}</p>
 		</div>
 		<ul class="testimonials__list">
 			{#each testimonials.testimonials as testimonial}
@@ -144,18 +144,22 @@
 <section class="subscribe">
 	<div class="responsive-wrapper subscribe__container">
 		<div class="subscribe__container__content">
-			<h2 class="section-heading">{subscribe.heading}</h2>
-			<p class="section-subheading">{subscribe.subHeading}</p>
+			<h2>{subscribe.heading}</h2>
+			<p>{subscribe.subHeading}</p>
 		</div>
 		<form class="subscribe__form">
 			<label for="email" class="subscribe__label">
 				<div class="subscribe__input-wrapper">
-					<IconMessage />
+					<div>
+						<IconMessage />
+					</div>
 					<input type="email" id="email" placeholder="Add your email address" autocomplete="off" />
 				</div>
 				<button type="submit" class="subscribe__button">
 					<span>Subscribe</span>
-					<IconCircleArrowRight />
+					<div>
+						<IconCircleArrowRight />
+					</div>
 				</button>
 			</label>
 		</form>
