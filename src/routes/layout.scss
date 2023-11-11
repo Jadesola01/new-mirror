@@ -17,11 +17,14 @@
 				@apply font-light text-inherit text-sm leading-[1.3] py-3 px-6 lg:p-[10px] text-center;
 				&[aria-current='true'] {
 					@apply relative before:absolute before:h-px before:left-3.5 before:bottom-[3px] before:w-[42.37288%] before:bg-purple-1 after:absolute after:w-1 after:aspect-square after:rotate-45 after:bg-purple-1 after:bottom-0.5 after:left-2.5;
+					span {
+						text-shadow: 0 0 1px currentColor, 0 0 1px currentColor;
+					}
 				}
 			}
 		}
 		&__quote-link {
-			@apply hidden rounded-md lg:inline-block py-[15px] px-[47.5px] font-bold text-white-2 bg-gradient-to-b from-black via-black to-purple-1 text-sm lg:text-base leading-tight lg:leading-tight shrink-0;
+			@apply hidden rounded-md lg:inline-block py-[15px] px-[47.5px] font-bold text-white bg-gradient-to-b from-black via-black to-purple-1 text-sm lg:text-base leading-tight lg:leading-tight shrink-0;
 		}
 	}
 }
@@ -43,15 +46,9 @@
 			&-icons {
 				@apply flex items-center gap-6 p-0 list-none md:gap-12;
 				.footer__social-link {
-					@apply block shrink-0 w-6 aspect-square md:w-10;
+					@apply w-6 aspect-square md:w-10;
 					&:last-child {
 						@apply hidden lg:last:inline-block;
-					}
-					svg {
-						width: unset;
-						height: unset;
-						stroke-width: unset;
-						@apply w-full stroke-1;
 					}
 				}
 			}

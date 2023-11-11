@@ -185,14 +185,17 @@
 			}
 		}
 		.testimonials__list {
-			@apply flex w-full gap-2 p-0 overflow-auto lg:gap-9;
+			@apply flex items-center w-full gap-2 p-0 overflow-auto lg:gap-9;
 			&__item {
-				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 lg:pt-[70px] lg:pl-[75px] lg:pr-[50px] lg:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal lg:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 lg:before:left-6 lg:before:text-gray-3;
+				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 lg:pt-[70px] lg:pl-[75px] lg:pr-[50px] lg:pb-6 relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal lg:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 lg:before:left-6 lg:before:text-gray-3;
 				.testimonial__comment {
-					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px] lg:py-[26.5px] px-2 lg:px-6 max-h-20 lg:max-h-none overflow-y-auto;
+					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px] lg:py-[26.5px] px-2 lg:px-6 max-h-20 lg:max-h-none lg:h-[154px] overflow-y-auto lg:mb-4;
+					&::-webkit-scrollbar {
+						appearance: none;
+					}
 				}
 				.testimonial__details {
-					@apply flex items-center md:gap-4 md:mt-4;
+					@apply flex items-center lg:gap-4;
 					.testimonial__avatar {
 						@apply relative w-[38px] md:w-20 aspect-square;
 						img {

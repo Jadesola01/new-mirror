@@ -64,9 +64,7 @@
 		</div>
 		<hr class="footer__container__separator" />
 		<div class="footer__links">
-			<a href="/t&s" class="footer__link">Terms and Service</a>|<a href="/pp" class="footer__link"
-				>Privacy Policy</a
-			>
+			<a href="/" class="footer__link">Terms and Service&nbsp;|&nbsp;Privacy Policy</a>
 		</div>
 	</div>
 </footer>
