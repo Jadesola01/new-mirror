@@ -1,12 +1,12 @@
-import { IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-svelte';
+import { FacebookLogo, InstagramLogoLight } from '$lib/assets/vectors';
 
 export default {
 	hero: {
 		heading: 'Contact us',
 		subHeading: "Looking for a trusted agency for your projects? We're here!",
 		socials: [
-			{ icon: IconBrandFacebook, href: 'https://facebook.com/thdctech' },
-			{ icon: IconBrandInstagram, href: 'https://instagram.com/thdctech' }
+			{ icon: FacebookLogo, href: 'https://facebook.com/thdctech' },
+			{ icon: InstagramLogoLight, href: 'https://instagram.com/thdctech' }
 		]
 	},
 	stepSection: {

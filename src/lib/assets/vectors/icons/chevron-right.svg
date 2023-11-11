@@ -1,7 +1,7 @@
 <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="vuesax/linear/arrow-right">
-<g id="arrow-right">
-<path id="Vector" d="M7.4248 17.5696L12.8581 12.1363C13.4998 11.4946 13.4998 10.4446 12.8581 9.80296L7.4248 4.36963" stroke="#F9F9FF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<g>
+<g>
+<path d="M7.4248 17.5696L12.8581 12.1363C13.4998 11.4946 13.4998 10.4446 12.8581 9.80296L7.4248 4.36963" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 </svg>

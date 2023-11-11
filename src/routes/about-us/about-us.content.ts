@@ -1,24 +1,24 @@
-import { IconBrandAsana, IconBuilding, IconPalette, IconSettings } from '@tabler/icons-svelte';
-import { AboutUsHero } from '$lib/assets/images';
+import { IMG7 } from '$lib/assets/images';
+import { IconSetting, IconDesign, IconBuilding, AsanaLogo } from '$lib/assets/vectors';
 
 export default {
 	hero: {
 		heading: 'About Us',
 		subHeading: {
-			0: "Our team of experienced professionals is passionate about helping our clients achieve their business goals. We take the time to understand each client's unique needs and develop customized solutions that deliver results.",
-			1: 'We believe that every business has a story to tell, and we are committed to helping our clients tell their stories in a way that resonates with their target audience. We are also committed to providing our clients with the highest quality of service and support.'
+			0: "We have a proven track record of success in helping businesses of all sizes create and grow their e-commerce stores. We've worked with clients in a wide range of industries, from fashion and beauty to food and beverage.",
+			1: "We're committed to providing our clients with the highest quality apps, themes, and services. We're also passionate about helping our clients succeed. We offer a wide range of support resources, including blog posts, webinars, and one-on-one consultations."
 		},
 		image: {
-			src: AboutUsHero,
+			src: IMG7,
 			alt: ''
 		}
 	},
 	whatWeDo: {
 		doings: [
 			{ icon: IconBuilding, title: 'Web Development' },
-			{ icon: IconPalette, title: 'Design' },
-			{ icon: IconSettings, title: 'SEO Expertise' },
-			{ icon: IconBrandAsana, title: 'Project Management' }
+			{ icon: IconDesign, title: 'Design' },
+			{ icon: IconSetting, title: 'SEO Expertise' },
+			{ icon: AsanaLogo, title: 'Project Management' }
 		]
 	}
 };

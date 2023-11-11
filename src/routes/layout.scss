@@ -14,9 +14,9 @@
 		&__nav {
 			@apply flex aria-hidden:hidden lg:aria-hidden:flex absolute z-50 lg:static flex-col lg:flex-row items-stretch py-3 bg-white-1 top-20 md:top-28 left-0 w-full lg:w-auto lg:gap-[17px];
 			.nav-link {
-				@apply font-light text-inherit text-sm leading-[1.3] py-3 px-6 lg:p-[10px] text-center border border-transparent;
+				@apply font-light text-inherit text-sm leading-[1.3] py-3 px-6 lg:p-[10px] text-center;
 				&[aria-current='true'] {
-					@apply border-b-purple-1 font-bold;
+					@apply relative before:absolute before:h-px before:left-3.5 before:bottom-[3px] before:w-[42.37288%] before:bg-purple-1 after:absolute after:w-1 after:aspect-square after:rotate-45 after:bg-purple-1 after:bottom-0.5 after:left-2.5;
 				}
 			}
 		}

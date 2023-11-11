@@ -1,8 +1,7 @@
 <script>
-	import { IconCircleArrowRight } from '@tabler/icons-svelte';
+	import { IconCircleArrowRight, SVG2 } from '$lib/assets/vectors';
 	import getAQuote from './get-a-quote.contents';
 	import './get-a-quote.scss';
-	import { ImageOverlay } from '$lib/assets/vectors';
 
 	const { hero } = getAQuote;
 </script>
@@ -15,7 +14,7 @@
 	<div class="responsive-wrapper gaq-page__responsive-wrapper">
 		<div class="landing__image-container">
 			<div>
-				<ImageOverlay />
+				<SVG2 />
 				<img src={hero.image.src} alt={hero.image.alt} loading="eager" />
 			</div>
 		</div>
@@ -26,7 +25,7 @@
 			</div>
 			<div class="landing__image-container">
 				<div>
-					<ImageOverlay />
+					<SVG2 />
 					<img src={hero.image.src} alt={hero.image.alt} loading="eager" />
 				</div>
 			</div>

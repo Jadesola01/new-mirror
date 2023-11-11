@@ -1,4 +1,4 @@
-import { GetAQuoteHero } from '$lib/assets/images';
+import { IMG3 } from '$lib/assets/images';
 
 export default {
 	hero: {
@@ -6,7 +6,7 @@ export default {
 		subHeading:
 			'We understand that every business is different, and we offer a variety of Shopify development services to meet your needs. Whether you need a simple website or a complex e-commerce store, we can help.',
 		image: {
-			src: GetAQuoteHero,
+			src: IMG3,
 			alt: ''
 		}
 	}

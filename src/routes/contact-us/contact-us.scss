@@ -14,11 +14,6 @@
 			@apply flex items-center justify-center gap-4 text-gray-6 lg:justify-start;
 			.social-link {
 				@apply w-[18px] lg:w-6;
-				svg {
-					width: unset;
-					height: unset;
-					@apply w-full;
-				}
 			}
 		}
 	}

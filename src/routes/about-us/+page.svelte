@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { IconChevronLeft } from '@tabler/icons-svelte';
 	import {
 		DigitalOceanLogo,
 		IconChevronRight,
@@ -77,7 +76,9 @@
 					<p>Just some of the leading brands that trust THDC Technologies</p>
 					<div class="tab-pane__slider">
 						<button type="button" title="Show previous clients">
-							<IconChevronLeft />
+							<div>
+								<IconChevronRight />
+							</div>
 						</button>
 						<div class="tab-clients">
 							<div>
@@ -95,7 +96,9 @@
 					<h3>Our Trusted Partners</h3>
 					<div class="tab-pane__slider">
 						<button type="button" title="Show previous partners">
-							<IconChevronLeft />
+							<div>
+								<IconChevronRight />
+							</div>
 						</button>
 						<div class="tab-partners">
 							<div>

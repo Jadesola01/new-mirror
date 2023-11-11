@@ -1,5 +1,5 @@
 <script>
-	import { DocumentText, Inbox, StepIndicatorCircle } from 'src/lib/assets/vectors';
+	import { IconTextDocument, IconInbox, SVG3 } from '$lib/assets/vectors';
 	import contactUsContents from './contact-us.contents';
 	import './contact-us.scss';
 
@@ -37,7 +37,7 @@
 				<div class="section__steps__indicators">
 					{#each stepSection.steps as _}
 						<div class="step-indicator">
-							<StepIndicatorCircle />
+							<SVG3 />
 							<i />
 						</div>
 					{/each}
@@ -56,7 +56,7 @@
 			<div class="form-wrapper__content">
 				<div class="form-wrapper__content__header">
 					<div class="icon-wrapper">
-						<Inbox />
+						<IconInbox />
 					</div>
 					<p>
 						Write us a few words describing your project and we'll prepare a proposal for you within <span
@@ -77,7 +77,7 @@
 						<label for="document">
 							<input type="file" id="document" />
 							<div>
-								<DocumentText />
+								<IconTextDocument />
 							</div>
 							<span>Attach Document</span>
 						</label>
