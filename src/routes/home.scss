@@ -176,12 +176,12 @@
 	&__container.responsive-wrapper {
 		@apply max-w-screen-2xl pt-14 lg:pt-[72px] lg:pb-[109px] pb-8 #{!important};
 		.testimonials__header {
-			@apply text-center mb-[30px];
+			@apply text-center mb-[30px] lg:mb-14;
 			h2 {
-				@apply text-xl font-bold leading-[1.25] md:text-5xl mb-2.5;
+				@apply text-xl font-bold leading-[1.25] lg:text-5xl mb-2.5 lg:mb-3;
 			}
 			p {
-				@apply text-[11px] leading-normal w-[72.8%] mx-auto font-light lg:text-base lg:w-auto lg:px-4 lg:mb-[69px];
+				@apply text-[11px] leading-normal w-[72.8%] lg:w-5/12 mx-auto font-light lg:text-base lg:leading-tight;
 			}
 		}
 		.testimonials__list {
@@ -189,7 +189,7 @@
 			&__item {
 				@apply shrink-0 w-[47.2%]  lg:w-[34.79167%] bg-white-1 lg:pt-[70px] lg:pl-[75px] lg:pr-[50px] lg:pb-[29px] relative pt-[19px] pr-4 pb-[5px] pl-[25px] before:content-['“'] before:text-4xl before:leading-normal lg:before:text-[121px] before:font-charm before:absolute before:top-0 before:left-2 lg:before:left-6 lg:before:text-gray-3;
 				.testimonial__comment {
-					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px] lg:py-[26.5px] px-2 lg:px-6 max-h-20 overflow-y-auto;
+					@apply text-[8px] font-light bg-gray-4 md:text-base md:leading-tight py-[10px] lg:py-[26.5px] px-2 lg:px-6 max-h-20 lg:max-h-none overflow-y-auto;
 				}
 				.testimonial__details {
 					@apply flex items-center md:gap-4 md:mt-4;
@@ -224,31 +224,31 @@
 .subscribe {
 	@apply bg-black-1 text-white-4 bg-pink-lines bg-no-repeat bg-bottom md:bg-pink-lines-lg bg-contain md:bg-[0%_100%] relative lg:before:content-confetti lg:after:content-confetti before:top-4 before:left-4 after:right-4 before:absolute after:absolute after:top-4;
 	&__container {
-		@apply pt-10 pb-[47px] lg:pt-[112px] lg:pb-[167px];
+		@apply pt-10 pb-[47px] lg:pt-[112px] lg:pb-[147px];
 		&__content {
-			@apply text-center mb-8;
+			@apply text-center mb-8 lg:mb-10;
 			h2 {
-				@apply text-xl leading-tight font-bold w-3/5 mx-auto mb-2.5;
+				@apply text-xl lg:text-[46px] leading-tight font-bold w-3/5 lg:w-1/2 mx-auto mb-2.5 lg:mb-3;
 			}
 			p {
-				@apply text-[11px] leading-normal font-light w-[79.2%] mx-auto;
+				@apply text-[11px] lg:text-base leading-normal lg:leading-tight font-light w-[79.2%] lg:w-[45%] mx-auto;
 			}
 		}
 		.subscribe__form {
-			@apply flex w-4/5 mx-auto lg:w-auto font-light;
+			@apply flex w-4/5 lg:w-[41.95313%] mx-auto font-light;
 			.subscribe__label {
-				@apply w-full flex items-center justify-center gap-5 text-gray-3 bg-white text-[10px] lg:text-base leading-tight rounded-lg overflow-hidden py-[12.5px] lg:py-[10px] lg:font-aeonik lg:leading-tight;
+				@apply w-full flex items-center justify-center gap-5 text-gray-3 bg-white text-[10px] lg:text-base leading-tight rounded-lg overflow-hidden py-[12.5px] lg:py-[10px] lg:font-aeonik lg:leading-tight lg:px-[21px] lg:justify-between;
 				.subscribe__input-wrapper {
-					@apply flex items-center gap-2 lg:gap-3;
+					@apply flex items-center gap-2 lg:gap-4;
 					div {
 						@apply w-4 lg:w-6;
 					}
 					input {
-						@apply text-xs leading-tight placeholder:text-inherit;
+						@apply text-xs lg:text-base leading-tight lg:leading-tight placeholder:text-inherit;
 					}
 				}
 				.subscribe__button {
-					@apply text-white bg-black-1 border-0 rounded-[5px] flex items-center gap-1.5 py-[11.5px] lg:py-3 px-[15.5px] lg:px-6 lg:text-sm;
+					@apply text-white bg-black-1 border-0 rounded-[5px] lg:rounded-lg flex items-center gap-1.5 lg:gap-2 py-[11.5px] lg:py-3 px-[15.5px] lg:px-[23px] lg:text-sm lg:leading-tight;
 					div {
 						@apply w-3 lg:w-6;
 					}

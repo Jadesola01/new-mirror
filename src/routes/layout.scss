@@ -33,7 +33,7 @@
 			@apply w-[72px] md:w-[184px] mx-auto;
 		}
 		&__paragraph {
-			@apply text-center font-light md:font-medium lg:my-6 w-3/4 lg:w-5/6 mx-auto;
+			@apply text-center font-light lg:my-6 w-3/4 lg:w-5/6 mx-auto;
 		}
 		.footer__social {
 			@apply flex items-center justify-center gap-4 md:gap-8;
@@ -60,7 +60,7 @@
 			@apply h-[1px] bg-purple-1 border-0 md:my-[14px] mx-[17.5px] md:mx-[85px];
 		}
 		.footer__links {
-			@apply flex items-center justify-center gap-1;
+			@apply flex items-center justify-center gap-1 font-medium;
 		}
 	}
 }
